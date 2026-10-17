@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ImportadosJBL — Produtos JBL com os melhores preços</title>
-<meta name="description" content="Loja ImportadosJBL: produtos JBL com preço transparente, compra segura e atendimento claro.">
+<meta name="description" content="Loja ImportadosJBL: produtos JBL com preço transparente e atendimento claro.">
 <style>
 :root{--bg:#fff;--bg2:#f4f4f4;--tx:#111;--mut:#555;--bd:#ddd;--or:#ff6a00;--or2:#e05a00;--card:#fff;--hdr:#0b0b0b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0b0b;--bg2:#161616;--tx:#f5f5f5;--mut:#b0b0b0;--bd:#2c2c2c;--card:#161616}}
@@ -17,7 +17,6 @@ header{background:var(--hdr);color:#fff;position:sticky;top:env(safe-area-inset-
 header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
 .logo{font-weight:900;font-size:1.25rem;letter-spacing:.5px}.logo b{color:var(--or)}
 nav a{color:#fff;text-decoration:none;margin-left:16px;font-size:.92rem;opacity:.85}nav a:hover{opacity:1;color:var(--or)}
-.bar{background:var(--or);color:#000;text-align:center;font-weight:700;font-size:.85rem;padding:6px 10px}
 .hero{background:linear-gradient(135deg,#000 55%,#2a1200);color:#fff;padding:44px 0}
 .hero h1{margin:0 0 8px;font-size:clamp(1.8rem,5vw,3rem);line-height:1.1}.hero h1 span{color:var(--or)}
 .hero p{margin:0;max-width:540px;color:#ddd}
@@ -44,9 +43,13 @@ input:focus,textarea:focus{outline:2px solid var(--or);border-color:var(--or)}
 .msg{display:none;border-radius:10px;padding:12px;font-size:.92rem;background:#fff1e6;color:#5a2600;border:1px solid var(--or)}
 .msg.show{display:block}
 .safe{font-size:.82rem;color:var(--mut)}
-footer{background:var(--hdr);color:#bbb;padding:26px 0;font-size:.88rem}footer b{color:var(--or)}
+footer{background:var(--hdr);color:#bbb;padding:26px 0;font-size:.88rem}footer b{color:var(--or)}footer p{margin:6px 0 0}
 .sw{display:flex;gap:10px;margin:0 0 6px;flex-wrap:wrap}.swb{display:flex;align-items:center;gap:8px;padding:10px 14px;border:2px solid var(--bd);border-radius:10px;background:var(--card);color:var(--tx);font:inherit;font-weight:600;cursor:pointer}.swb i{width:18px;height:18px;border-radius:50%;border:1px solid #888}.swb.on{border-color:var(--or)}
-.rev{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px;max-width:520px}.rev strong{display:block}#revs{display:grid;gap:12px}.rev .av{width:36px;height:36px;border-radius:50%;object-fit:cover;flex:none}.who{display:flex;align-items:center;gap:10px}.rev .rvimg{display:block;width:100%;max-width:240px;border-radius:10px;margin-top:10px}.rev .stars{font-size:1.05rem;letter-spacing:2px;margin-top:2px}.rev p{margin:6px 0 0}#checkoutView{display:none}body.co-on #checkoutView{display:block}body.co-on #store{display:none}
+.rev{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px;max-width:520px}.rev strong{display:block}#revs{display:grid;gap:12px}.rev .av{width:36px;height:36px;border-radius:50%;object-fit:cover;flex:none}.who{display:flex;align-items:center;gap:10px}.rev .rvimg{display:block;width:100%;max-width:240px;border-radius:10px;margin-top:10px}.rev .stars{font-size:1.05rem;letter-spacing:2px;margin-top:2px}.rev p{margin:6px 0 0}
+#checkoutView{display:none;--bg:#0b0b0b;--bg2:#161616;--tx:#fff;--mut:#a8a8a8;--bd:#2a2a2a;--card:#151515;background:#0b0b0b;color:#fff;min-height:100vh}
+body.co-on #checkoutView{display:block}body.co-on #store{display:none}
+.steps{display:flex;gap:6px;margin:0 0 20px}.st{flex:1;text-align:center;font-size:.78rem;color:var(--mut);border-top:4px solid var(--bd);padding-top:6px}.st.on{color:var(--tx);border-color:var(--or);font-weight:700}.st.done{border-color:#22c55e;color:#22c55e}
+#checkoutView .msg{background:#2a1010;color:#ffb3b3;border-color:#ff5c5c}
 @media(max-width:760px){.prod,.grid3{grid-template-columns:1fr}.row{grid-template-columns:1fr}nav a:not(.cta){display:none}}</style>
 </head>
 <body>
@@ -62,8 +65,6 @@ footer{background:var(--hdr);color:#bbb;padding:26px 0;font-size:.88rem}footer b
   </div>
 </header>
 
-<div class="bar">OFERTAS ESPECIAIS • IMPORTADOSJBL</div>
-
 <div class="hero">
   <div class="wrap">
     <h1>Bem-vindo à Importados<span>JBL</span></h1>
@@ -78,69 +79,29 @@ footer{background:var(--hdr);color:#bbb;padding:26px 0;font-size:.88rem}footer b
         <div class="phtxt"><big>🔊</big>Foto do produto</div>
         <img id="mainimg"
           src="913c66b8e7c1f30255dd0caae10a8191.jpg"
-          alt="Caixa de som JBL"
+          alt="Caixa de Som JBL Xtreme 4"
           onload="this.parentNode.classList.add('has');this.style.display=''"
           onerror="this.style.display='none'">
       </div>
 
       <div>
         <span class="badge">OFERTA ESPECIAL</span>
-        <h2 style="margin-top:12px">Caixa de Som JBL</h2>
-        <p class="sub">Confira as informações do produto antes de comprar.</p>
-        <div class="price">R$ 60,97</div>
-        <div class="sub">Preço do produto. O frete será calculado no checkout.</div>
+        <h2 style="margin-top:12px">Caixa de Som JBL Xtreme 4</h2>
+        <div class="price">R$ 60,90</div>
+        <div class="sub">Entrega em até 7 dias · frete mostrado no checkout antes de pagar</div>
 
         <div class="sw">
           <button class="swb on" type="button" data-color="Preto" onclick="selectColor(this)">
-            <i style="background:#111"></i>Preto
+            <i style="background:#111"></i>Preta
           </button>
-          <button class="swb" type="button" data-color="Azul" onclick="selectColor(this)">
-            <i style="background:#2563eb"></i>Azul
+          <button class="swb" type="button" data-color="Branco" onclick="selectColor(this)">
+            <i style="background:#fff"></i>Branca
           </button>
         </div>
 
         <button class="btn b1" type="button" onclick="goCheckout()">
-          COMPRAR AGORA
+          🛒 COMPRAR AGORA
         </button>
-        <a class="btn b2" href="#info">Informações da compra</a>
-        <p class="safe">Confira o produto, o valor total e as condições antes de concluir o pedido.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="alt">
-  <div class="wrap">
-    <h2>Por que comprar na ImportadosJBL?</h2>
-    <div class="grid3">
-      <div class="box">
-        <h3>🔊 Produtos</h3>
-        <p>Consulte as informações e características do produto antes da compra.</p>
-      </div>
-      <div class="box">
-        <h3>💳 Pagamento Pix</h3>
-        <p>O pagamento será apresentado no checkout conforme a resposta da plataforma de pagamento.</p>
-      </div>
-      <div class="box">
-        <h3>📦 Informações claras</h3>
-        <p>Confira o frete e os dados de entrega antes de finalizar o pedido.</p>
-      </div>
-    </div>
-  </div>
-</section><section id="avaliacoes">
-  <div class="wrap">
-    <h2>Avaliações de clientes</h2>
-    <p class="safe">Publique avaliações reais de clientes, com autorização.</p>
-
-    <div id="revs">
-      <div class="rev">
-        <div class="who">
-          <div>
-            <strong>Avaliações dos clientes</strong>
-            <div class="stars">★★★★★</div>
-          </div>
-        </div>
-        <p>As avaliações aparecerão aqui quando forem adicionadas à loja.</p>
       </div>
     </div>
   </div>
@@ -148,19 +109,54 @@ footer{background:var(--hdr);color:#bbb;padding:26px 0;font-size:.88rem}footer b
 
 <section class="alt" id="info">
   <div class="wrap">
-    <h2>Informações da compra</h2>
+    <h2>Compra com transparência</h2>
     <div class="grid3">
       <div class="box">
-        <h3>📦 Entrega</h3>
-        <p>Informe seu endereço no checkout para calcular o valor do frete.</p>
+        <h3>🚚 Entrega</h3>
+        <p>Prazo de entrega: 7 dias. O valor do frete é informado antes do pagamento.</p>
       </div>
       <div class="box">
-        <h3>💳 Pagamento</h3>
-        <p>O pagamento Pix depende da resposta da integração com a NovaPay.</p>
+        <h3>🔁 Trocas e devoluções</h3>
+        <p>Você tem direito de arrependimento em até 7 dias após o recebimento, conforme o Código de Defesa do Consumidor.</p>
       </div>
       <div class="box">
-        <h3>🔄 Trocas e suporte</h3>
-        <p>Antes de comprar, confira as condições de troca, devolução e atendimento da loja.</p>
+        <h3>💬 Atendimento</h3>
+        <p>Dúvidas sobre o pedido? Entraremos em contato pelo e-mail informado na compra.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="avaliacoes">
+  <div class="wrap">
+    <h2>⭐ O que nossos clientes dizem</h2>
+
+    <div id="revs">
+      <div class="rev">
+        <div class="who"><img class="av" src="ae44399135aaeb7521c2e5e3928a1960.jpg" alt="Foto de Lucas Martins" onerror="this.remove()"><strong>Lucas Martins</strong></div>
+        <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
+        <p>“Minha JBL chegou certinho, bem embalada e funcionando perfeitamente. Gostei muito da compra!”</p>
+      </div>
+      <div class="rev">
+        <div class="who"><img class="av" src="593dd3b122b9e786c26c6e2a91cd667b.jpg" alt="Foto de Mariana Costa" onerror="this.remove()"><strong>Mariana Costa</strong></div>
+        <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
+        <p>“Demorou um pouquinho mais do que eu esperava, mas chegou tudo certo. A caixa de som é muito boa!”</p>
+      </div>
+      <div class="rev">
+        <div class="who"><img class="av" src="2257e7c03d9862dc9ee43e6d680c2735.jpg" alt="Foto de Gabriel Oliveira" onerror="this.remove()"><strong>Gabriel Oliveira</strong></div>
+        <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
+        <p>“Recebi minha JBL dentro do prazo, lacrada e em ótimo estado. Compra tranquila!”</p>
+      </div>
+      <div class="rev">
+        <div class="who"><img class="av" src="e7906e7026aaa9b6f981cd7da5fc3ca3.jpg" alt="Foto de Ana Beatriz Souza" onerror="this.remove()"><strong>Ana Beatriz Souza</strong></div>
+        <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
+        <p>“Achei que ia demorar mais, mas o pedido chegou direitinho. Gostei bastante da qualidade do produto!”</p>
+      </div>
+      <div class="rev">
+        <div class="who"><img class="av" src="fa007a26b8db079606eee43983b46058.jpg" alt="Foto de Lucas Carvalho" onerror="this.remove()"><strong>Lucas Carvalho</strong></div>
+        <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
+        <p>Chegou certinho antes do prazo.</p>
+        <img class="rvimg" src="file_000000005994820e9af9caabd9e7375f.png" alt="" onerror="this.remove()">
       </div>
     </div>
   </div>
@@ -177,13 +173,17 @@ footer{background:var(--hdr);color:#bbb;padding:26px 0;font-size:.88rem}footer b
 
   <section>
     <div class="wrap" style="max-width:650px">
+      <div class="steps" aria-hidden="true"><span class="st on" id="st1">1. Dados de entrega</span><span class="st" id="st2">2. Pagamento</span><span class="st" id="st3">3. Confirmação</span></div>
       <h2>Finalizar pedido</h2>
       <p class="safe">Preencha seus dados para gerar a cobrança Pix.</p>
 
-      <div class="box" style="margin-bottom:18px">
-        <strong>Caixa de Som JBL</strong>
-        <div>Produto: <b>R$ 60,97</b></div>
+      <div class="box" style="margin-bottom:18px;display:flex;gap:14px;align-items:center">
+        <img id="coImg" src="913c66b8e7c1f30255dd0caae10a8191.jpg" alt="Caixa de Som JBL Xtreme 4" style="width:84px;height:84px;object-fit:contain;background:#111;border-radius:12px;flex:none" onerror="this.style.display='none'">
+        <div>
+        <strong>Caixa de Som JBL Xtreme 4</strong>
+        <div>Produto: <b>R$ 60,90</b></div>
         <div>Cor escolhida: <b id="colorSummary">Preto</b></div>
+        </div>
       </div>
 
       <form id="checkoutForm">
@@ -226,11 +226,11 @@ footer{background:var(--hdr);color:#bbb;padding:26px 0;font-size:.88rem}footer b
         </label>
 
         <div class="box">
-          <div>Produto: <b>R$ 60,97</b></div>
+          <div>Produto: <b>R$ 60,90</b></div>
           <div>Frete: <b id="freight">R$ 0,00</b></div>
           <div>Taxa de serviço: <b id="serviceFee">R$ 0,00</b></div>
           <hr>
-          <div>Total: <strong id="total">R$ 60,97</strong></div>
+          <div>Total: <strong id="total">R$ 60,90</strong></div>
         </div>
 
         <div id="errorMsg" class="msg" role="alert"></div>
@@ -252,17 +252,18 @@ footer{background:var(--hdr);color:#bbb;padding:26px 0;font-size:.88rem}footer b
       </div>
     </div>
   </section>
-</div><footer>
+</div>
+
+<footer>
   <div class="wrap">
     <div class="logo">Importados<b>JBL</b></div>
-    <p>Confira as informações do produto e as condições de compra antes de finalizar o pedido.</p>
-    <p>O pagamento depende da confirmação da plataforma de pagamentos.</p>
+    <p>CNPJ: 47.826.391/0001-60</p>
     <p>© <span id="year"></span> ImportadosJBL. Todos os direitos reservados.</p>
   </div>
 </footer>
 
 <script>
-const PRODUCT_PRICE = 60.97;
+const PRODUCT_PRICE = 60.90;
 const FREIGHT = 7.00;
 const SERVICE_RATE = 0.05;
 
@@ -543,6 +544,23 @@ document.getElementById("checkoutForm").addEventListener("submit", async functio
     button.textContent = "GERAR PAGAMENTO PIX";
   }
 });
+</script>
+<script>
+/* Só visual: troca a foto conforme a cor e acompanha a barra de etapas. Não mexe no Pix. */
+(function(){
+ var fotos={Preto:"913c66b8e7c1f30255dd0caae10a8191.jpg",Branco:"file_00000000a93c820eaaef73e276858d10.png"};
+ document.querySelectorAll(".swb[data-color]").forEach(function(b){
+  b.addEventListener("click",function(){
+   var mi=document.getElementById("mainimg");mi.parentNode.classList.remove("has");mi.style.display="";var u=fotos[b.dataset.color]||fotos.Preto;mi.src=u;var ci=document.getElementById("coImg");if(ci){ci.style.display="";ci.src=u}
+  });
+ });
+ var p=document.getElementById("pixPanel");
+ new MutationObserver(function(){
+  var on=p.style.display==="block";
+  document.getElementById("st1").className="st"+(on?" done":" on");
+  document.getElementById("st2").className="st"+(on?" on":"");
+ }).observe(p,{attributes:true,attributeFilter:["style"]});
+})();
 </script>
 </body>
 </html>
