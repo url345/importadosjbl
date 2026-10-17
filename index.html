@@ -58,6 +58,7 @@ body.co-on #checkoutView{display:block}body.co-on #store{display:none}
 #checkoutView input:invalid:not(:placeholder-shown){border-color:#ff5c5c}
 #checkoutView.pix-on #coStep1{display:none}#pixPanel{text-align:center;padding:20px}
 .copyrow{display:flex;gap:8px;align-items:stretch}.copyrow textarea{flex:1;min-width:0;height:46px;resize:none;white-space:nowrap;overflow:hidden;font:.8rem ui-monospace,Menlo,monospace;padding:13px 12px}.copyrow .btn{width:auto;margin:0;padding:0 18px;font-size:.9rem}
+#toast{position:fixed;inset:0;display:none;place-items:center;background:rgba(0,0,0,.55);z-index:100;padding:20px}#toast.show{display:grid}#toast .tc{background:#151515;color:#fff;border:1px solid #2a2a2a;border-radius:20px;padding:26px 22px;max-width:340px;width:100%;text-align:center;animation:pop .25s ease}#toast .ic{width:72px;height:72px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;background:rgba(34,197,94,.15);border:2px solid #22c55e;color:#22c55e;font-size:2.2rem;font-weight:900}#toast.er .ic{background:rgba(255,92,92,.15);border-color:#ff5c5c;color:#ff5c5c}#toast h3{margin:0 0 6px;font-size:1.15rem}#toast p{margin:0;color:#a8a8a8;font-size:.92rem}@keyframes pop{from{transform:scale(.85);opacity:0}to{transform:scale(1);opacity:1}}
 @media(max-width:760px){.prod,.grid3{grid-template-columns:1fr}.row{grid-template-columns:1fr}nav a:not(.cta){display:none}}</style>
 </head>
 <body>
@@ -434,18 +435,18 @@ async function copyPix() {
   const code = document.getElementById("pixCode").value;
 
   if (!code) {
-    alert("O código Pix ainda não está disponível.");
+    toast("Código indisponível","O código Pix ainda não está disponível.",false);
     return;
   }
 
   try {
     await navigator.clipboard.writeText(code);
-    alert("Código Pix copiado!");
+    toast("Código copiado com sucesso!","Agora é só colar no aplicativo do seu banco.",true);
   } catch {
     const field = document.getElementById("pixCode");
     field.focus();
     field.select();
-    alert("Selecione e copie o código Pix.");
+    toast("Não foi possível copiar","Selecione o código e copie manualmente.",false);
   }
 }
 
@@ -592,6 +593,11 @@ document.getElementById("checkoutForm").addEventListener("submit", async functio
  var uf=f.elements.state;uf.addEventListener("input",function(){uf.value=uf.value.replace(/[^a-zA-Z]/g,"").toUpperCase().slice(0,2)});
  document.getElementById("pixBack").onclick=function(){document.getElementById("pixPanel").style.display="none"};
 })();
+</script>
+<script>
+/* Aviso bonito de código copiado (no lugar do alert do navegador) */
+(function(){var t,tm;window.toast=function(title,msg,ok){if(!t){t=document.createElement("div");t.id="toast";t.setAttribute("role","status");t.innerHTML='<div class="tc"><div class="ic"></div><h3></h3><p></p></div>';t.onclick=function(){t.classList.remove("show")};document.body.appendChild(t)}
+t.className="show"+(ok?"":" er");t.querySelector(".ic").textContent=ok?"✔":"!";t.querySelector("h3").textContent=title;t.querySelector("p").textContent=msg;clearTimeout(tm);tm=setTimeout(function(){t.classList.remove("show")},2400)}})();
 </script>
 </body>
 </html>
