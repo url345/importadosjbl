@@ -50,6 +50,14 @@ footer{background:var(--hdr);color:#bbb;padding:26px 0;font-size:.88rem}footer b
 body.co-on #checkoutView{display:block}body.co-on #store{display:none}
 .steps{display:flex;gap:6px;margin:0 0 20px}.st{flex:1;text-align:center;font-size:.78rem;color:var(--mut);border-top:4px solid var(--bd);padding-top:6px}.st.on{color:var(--tx);border-color:var(--or);font-weight:700}.st.done{border-color:#22c55e;color:#22c55e}
 #checkoutView .msg{background:#2a1010;color:#ffb3b3;border-color:#ff5c5c}
+.fs{border:1px solid var(--bd);border-radius:14px;padding:16px;margin:0;display:grid;gap:12px;background:var(--card);min-width:0}
+.fs legend{padding:0 8px;font-weight:800;font-size:.95rem}.fs legend i{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--or);color:#000;font-style:normal;font-size:.8rem;margin-right:8px}
+#checkoutView form{gap:14px}#checkoutView .box h2{font-size:1.3rem}
+.prodcard{display:flex;gap:14px;align-items:center;margin:0 0 16px}.prodcard img{width:84px;height:84px;object-fit:contain;background:#111;border-radius:12px;flex:none}
+.sumbox .ln{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--bd);font-size:.95rem}.sumbox .tot{border:0;font-size:1.25rem;color:var(--or);font-weight:900}
+#checkoutView input:invalid:not(:placeholder-shown){border-color:#ff5c5c}
+#checkoutView.pix-on #coStep1{display:none}#pixPanel{text-align:center;padding:20px}
+.copyrow{display:flex;gap:8px;align-items:stretch}.copyrow textarea{flex:1;min-width:0;height:46px;resize:none;white-space:nowrap;overflow:hidden;font:.8rem ui-monospace,Menlo,monospace;padding:13px 12px}.copyrow .btn{width:auto;margin:0;padding:0 18px;font-size:.9rem}
 @media(max-width:760px){.prod,.grid3{grid-template-columns:1fr}.row{grid-template-columns:1fr}nav a:not(.cta){display:none}}</style>
 </head>
 <body>
@@ -172,83 +180,93 @@ body.co-on #checkoutView{display:block}body.co-on #store{display:none}
   </header>
 
   <section>
-    <div class="wrap" style="max-width:650px">
+    <div class="wrap" style="max-width:680px">
       <div class="steps" aria-hidden="true"><span class="st on" id="st1">1. Dados de entrega</span><span class="st" id="st2">2. Pagamento</span><span class="st" id="st3">3. Confirmação</span></div>
-      <h2>Finalizar pedido</h2>
-      <p class="safe">Preencha seus dados para gerar a cobrança Pix.</p>
 
-      <div class="box" style="margin-bottom:18px;display:flex;gap:14px;align-items:center">
-        <img id="coImg" src="913c66b8e7c1f30255dd0caae10a8191.jpg" alt="Caixa de Som JBL Xtreme 4" style="width:84px;height:84px;object-fit:contain;background:#111;border-radius:12px;flex:none" onerror="this.style.display='none'">
-        <div>
-        <strong>Caixa de Som JBL Xtreme 4</strong>
-        <div>Produto: <b>R$ 60,90</b></div>
-        <div>Cor escolhida: <b id="colorSummary">Preto</b></div>
+      <div id="coStep1">
+        <h2 style="margin-bottom:6px">Finalizar pedido</h2>
+        <p class="safe" style="margin-top:0">Preencha seus dados para gerar a cobrança Pix.</p>
+
+        <div class="box prodcard">
+          <img id="coImg" src="913c66b8e7c1f30255dd0caae10a8191.jpg" alt="Caixa de Som JBL Xtreme 4" onerror="this.style.display='none'">
+          <div>
+            <strong>Caixa de Som JBL Xtreme 4</strong>
+            <div class="safe" style="margin:2px 0 0">Cor escolhida: <b id="colorSummary" style="color:var(--tx)">Preto</b></div>
+            <div style="color:var(--or);font-weight:900;font-size:1.2rem">R$ 60,90</div>
+          </div>
         </div>
+
+        <form id="checkoutForm">
+          <fieldset class="fs">
+            <legend><i>1</i>Seus dados</legend>
+            <label>Nome completo
+              <input name="name" autocomplete="name" required placeholder="Seu nome">
+            </label>
+            <div class="row">
+              <label>CPF
+                <input name="cpf" inputmode="numeric" autocomplete="off" required
+                  maxlength="14" minlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                  title="CPF com 11 números" placeholder="000.000.000-00">
+              </label>
+              <label>Telefone
+                <input name="phone" type="tel" inputmode="numeric" autocomplete="tel" required
+                  maxlength="15" minlength="15" pattern="\(\d{2}\) \d{5}-\d{4}"
+                  title="Telefone com DDD e 9 dígitos" placeholder="(00) 00000-0000">
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="fs">
+            <legend><i>2</i>Entrega</legend>
+            <div class="row">
+              <label>CEP
+                <input name="cep" inputmode="numeric" autocomplete="postal-code" required
+                  maxlength="9" minlength="9" pattern="\d{5}-\d{3}"
+                  title="CEP com 8 números" placeholder="00000-000">
+              </label>
+              <label>Estado (UF)
+                <input name="state" autocomplete="address-level1" required
+                  maxlength="2" minlength="2" pattern="[A-Za-z]{2}" title="Sigla do estado com 2 letras" placeholder="PR">
+              </label>
+            </div>
+            <label>Endereço e número
+              <input name="address" autocomplete="street-address" required
+                placeholder="Rua, número e complemento">
+            </label>
+            <label>Cidade
+              <input name="city" autocomplete="address-level2" required>
+            </label>
+            <label>Observação para entrega (opcional)
+              <textarea name="notes" rows="2" placeholder="Complemento ou referência"></textarea>
+            </label>
+          </fieldset>
+
+          <div class="box sumbox">
+            <div class="ln"><span>Produto</span><b>R$ 60,90</b></div>
+            <div class="ln"><span>Frete</span><b id="freight">R$ 0,00</b></div>
+            <div class="ln"><span>Taxa de serviço</span><b id="serviceFee">R$ 0,00</b></div>
+            <div class="ln tot"><span>Total</span><strong id="total">R$ 60,90</strong></div>
+          </div>
+
+          <div id="errorMsg" class="msg" role="alert"></div>
+
+          <button id="payButton" class="btn b1" type="submit">
+            GERAR PAGAMENTO PIX
+          </button>
+          <p class="safe" style="text-align:center">Confira os dados e o valor antes de pagar. O pedido só estará pago após confirmação da plataforma.</p>
+        </form>
       </div>
 
-      <form id="checkoutForm">
-        <label>Nome completo
-          <input name="name" autocomplete="name" required placeholder="Seu nome">
-        </label>
-
-        <label>CPF
-          <input name="cpf" inputmode="numeric" autocomplete="off" required
-            maxlength="14" placeholder="000.000.000-00">
-        </label>
-
-        <label>Telefone
-          <input name="phone" type="tel" autocomplete="tel" required
-            placeholder="(00) 00000-0000">
-        </label>
-
-        <label>CEP
-          <input name="cep" inputmode="numeric" autocomplete="postal-code"
-            required maxlength="9" placeholder="00000-000">
-        </label>
-
-        <label>Endereço e número
-          <input name="address" autocomplete="street-address" required
-            placeholder="Rua, número e complemento">
-        </label>
-
-        <div class="row">
-          <label>Cidade
-            <input name="city" autocomplete="address-level2" required>
-          </label>
-          <label>Estado
-            <input name="state" autocomplete="address-level1" required
-              maxlength="2" placeholder="PR">
-          </label>
-        </div>
-
-        <label>Observação para entrega (opcional)
-          <textarea name="notes" rows="2" placeholder="Complemento ou referência"></textarea>
-        </label>
-
-        <div class="box">
-          <div>Produto: <b>R$ 60,90</b></div>
-          <div>Frete: <b id="freight">R$ 0,00</b></div>
-          <div>Taxa de serviço: <b id="serviceFee">R$ 0,00</b></div>
-          <hr>
-          <div>Total: <strong id="total">R$ 60,90</strong></div>
-        </div>
-
-        <div id="errorMsg" class="msg" role="alert"></div>
-
-        <button id="payButton" class="btn b1" type="submit">
-          GERAR PAGAMENTO PIX
-        </button>
-        <p class="safe">Confira os dados e o valor antes de pagar. O pedido só estará pago após confirmação da plataforma.</p>
-      </form>
-
-      <div id="pixPanel" class="box" style="display:none;margin-top:18px">
-        <h2>Pagamento Pix</h2>
-        <p id="pixStatus">Aguardando os dados do pagamento…</p>
+      <div id="pixPanel" class="box" style="display:none">
+        <button type="button" class="swb" id="pixBack" style="margin-bottom:14px">← Editar dados</button>
+        <h2 style="margin-bottom:6px">Pagamento Pix</h2>
+        <p id="pixStatus" class="safe">Aguardando os dados do pagamento…</p>
         <div id="qrArea" style="text-align:center;margin:16px 0"></div>
-        <label>Pix copia e cola
-          <textarea id="pixCode" rows="4" readonly></textarea>
-        </label>
-        <button type="button" class="btn b1" onclick="copyPix()">COPIAR CÓDIGO PIX</button>
+        <div class="safe" style="margin:0 0 6px">Pix copia e cola</div>
+        <div class="copyrow">
+          <textarea id="pixCode" rows="1" readonly aria-label="Pix copia e cola"></textarea>
+          <button type="button" class="btn b1" onclick="copyPix()">COPIAR</button>
+        </div>
       </div>
     </div>
   </section>
@@ -556,10 +574,23 @@ document.getElementById("checkoutForm").addEventListener("submit", async functio
  });
  var p=document.getElementById("pixPanel");
  new MutationObserver(function(){
-  var on=p.style.display==="block";
+  var on=p.style.display==="block";document.getElementById("checkoutView").classList.toggle("pix-on",on);if(on)window.scrollTo(0,0);
   document.getElementById("st1").className="st"+(on?" done":" on");
   document.getElementById("st2").className="st"+(on?" on":"");
  }).observe(p,{attributes:true,attributeFilter:["style"]});
+})();
+</script>
+<script>
+/* Só visual: máscaras e limite exato de dígitos (CPF 11, telefone 11, CEP 8, UF 2) e botão voltar da tela do Pix */
+(function(){
+ var f=document.getElementById("checkoutForm");
+ function cpfOk(c){c=c.replace(/\D/g,"");if(c.length!==11||/^(\d)\1+$/.test(c))return false;for(var t=9;t<11;t++){var s=0;for(var i=0;i<t;i++)s+=c[i]*(t+1-i);if((s*10%11)%10!=c[t])return false}return true}
+ function mask(n,max,fn){var el=f.elements[n];el.addEventListener("input",function(){var d=el.value.replace(/\D/g,"").slice(0,max);el.value=fn(d);if(n==="cpf")el.setCustomValidity(d.length===11&&!cpfOk(d)?"CPF inválido":"")})}
+ mask("cpf",11,function(d){return d.replace(/^(\d{3})(\d)/,"$1.$2").replace(/^(\d{3})\.(\d{3})(\d)/,"$1.$2.$3").replace(/\.(\d{3})(\d)/,".$1-$2")});
+ mask("phone",11,function(d){if(d.length>7)return"("+d.slice(0,2)+") "+d.slice(2,7)+"-"+d.slice(7);if(d.length>2)return"("+d.slice(0,2)+") "+d.slice(2);return d.length?"("+d:""});
+ mask("cep",8,function(d){return d.length>5?d.slice(0,5)+"-"+d.slice(5):d});
+ var uf=f.elements.state;uf.addEventListener("input",function(){uf.value=uf.value.replace(/[^a-zA-Z]/g,"").toUpperCase().slice(0,2)});
+ document.getElementById("pixBack").onclick=function(){document.getElementById("pixPanel").style.display="none"};
 })();
 </script>
 </body>
