@@ -1,4 +1,3 @@
-
 module.exports = async (req, res) => {
   if (req.method !== "POST") {
     return res.status(405).json({
@@ -6,8 +5,8 @@ module.exports = async (req, res) => {
     });
   }
 
-  const ci = process.env.NOVAPAY_CI;
-  const cs = process.env.NOVAPAY_CS;
+  const ci = process.env.NOVAPAY_CLIENT_ID;
+  const cs = process.env.NOVAPAY_CLIENT_SECRET;
 
   if (!ci || !cs) {
     return res.status(500).json({
@@ -15,7 +14,7 @@ module.exports = async (req, res) => {
     });
   }
 
-  const { amount, description } = req.body || {};
+  const { amount, description, color, customer } = req.body || {};
 
   if (
     typeof amount !== "number" ||
@@ -39,22 +38,33 @@ module.exports = async (req, res) => {
         },
         body: JSON.stringify({
           amount,
-          description: description || "Pedido Central Lanches"
+          description: description || "Pedido ImportadosJBL"
         })
       }
     );
 
-    const result = await response.text();
+    const text = await response.text();
 
     let data;
+
     try {
-      data = JSON.parse(result);
+      data = JSON.parse(text);
     } catch {
-      data = { message: result };
+      data = {
+        message: text
+      };
     }
 
-    return res.status(response.status).json(data);
-  } catch {
+    if (!response.ok) {
+      return res.status(response.status).json({
+        error: data.message || data.error || "Erro ao criar cobrança na NovaPay",
+        details: data
+      });
+    }
+
+    return res.status(200).json(data);
+
+  } catch (error) {
     return res.status(502).json({
       error: "Falha ao conectar com a NovaPay"
     });
