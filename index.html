@@ -72,7 +72,7 @@ footer{background:var(--hdr);color:#bbb;padding:26px 0;font-size:.88rem}footer b
 <div>
 <span class="badge">OFERTA ESPECIAL</span>
 <h2 id="pname" style="margin:10px 0 0">Caixa de Som JBL Xtreme 4</h2>
-<div class="price" id="pprice">R$ 60,97</div>
+<div class="price" id="pprice">R$ 60,90</div>
 <div class="sub">Entrega em até 7 dias · frete mostrado antes da confirmação</div>
 <div class="sw" role="radiogroup" aria-label="Cor"><button type="button" class="swb on" data-c="Preta" role="radio" aria-checked="true"><i style="background:#111"></i>Preta</button><button type="button" class="swb" data-c="Branca" role="radio" aria-checked="false"><i style="background:#fff"></i>Branca</button></div>
 <a class="btn b1" href="#checkout">🛒 COMPRAR AGORA</a>
@@ -142,7 +142,7 @@ footer{background:var(--hdr);color:#bbb;padding:26px 0;font-size:.88rem}footer b
 
 <script>
 var $=function(s){return document.querySelector(s)},brl=function(v){return"R$ "+v.toFixed(2).replace(".",",")};
-var cfg={preco:60.97,frete:null,prazo:"7 dias"},oid=null,tm=null;
+var cfg={preco:60.9,frete:null,prazo:"7 dias"},oid=null,tm=null;
 document.getElementById("pimg").onerror=function(){var d=document.createElement("div");d.className="ph";d.textContent="🔊";this.replaceWith(d)};
 function render(){var fr=typeof cfg.frete==="number";$("#vp").textContent=brl(cfg.preco);
  $("#vf").textContent=fr?(cfg.frete===0?"Grátis":brl(cfg.frete)):"a confirmar";
