@@ -84,7 +84,7 @@ footer{background:var(--hdr);color:#bbb;padding:26px 0;font-size:.88rem}footer b
 <div class="grid3">
 <div class="box"><h3>🚚 Entrega</h3><p>Prazo de entrega: 7 dias. O valor do frete é informado antes do pagamento. Você recebe o código de rastreio quando houver envio.</p></div>
 <div class="box"><h3>🔁 Trocas e devoluções</h3><p>Você tem direito de arrependimento em até 7 dias após o recebimento, conforme o Código de Defesa do Consumidor.</p></div>
-<div class="box"><h3>💬 Atendimento</h3><p>Dúvidas sobre o pedido? Fale com a loja pelos canais abaixo, no rodapé.</p></div>
+<div class="box"><h3>💬 Atendimento</h3><p>Dúvidas sobre o pedido? Entraremos em contato pelo e-mail informado na compra.</p></div>
 </div></div></section>
 
 <section id="avaliacoes"><div class="wrap"><h2>⭐ O que nossos clientes dizem</h2>
@@ -99,13 +99,12 @@ footer{background:var(--hdr);color:#bbb;padding:26px 0;font-size:.88rem}footer b
 </div>
 <div id="checkoutView"><div class="wrap">
 <div class="chdr"><div class="logo">Importados<b>JBL</b></div><div style="display:flex;gap:12px;align-items:center"><button type="button" id="tostore" class="lnk">← Voltar à loja</button></div></div>
-<div class="steps"><div class="st on" id="s1">1. Dados de entrega</div><div class="st" id="s2">2. Pagamento Pix</div><div class="st" id="s3">3. Confirmação</div></div>
+<div class="steps"><div class="st on" id="s1">1. Dados de entrega</div><div class="st" id="s2">2. Pagamento</div><div class="st" id="s3">3. Confirmação</div></div>
 <div class="grid"><main>
 <section class="card" id="p1"><h2><i>●</i> Dados de entrega</h2>
 <form id="f" novalidate>
 <label>Nome completo<input name="nome" autocomplete="name"></label>
-<div class="r2"><label>Telefone (com DDD)<input name="tel" type="tel" inputmode="tel" autocomplete="tel"></label>
-<label>E-mail (exigido pelo Pix)<input name="email" type="email" autocomplete="email"></label></div>
+<label>E-mail<input name="email" type="email" autocomplete="email"></label>
 <div class="r2"><label>CEP<input name="cep" inputmode="numeric" maxlength="9" autocomplete="postal-code"></label>
 <label>Bairro<input name="bairro"></label></div>
 <div class="r3"><label>Número<input name="num"></label><label>Endereço (rua)<input name="end" autocomplete="address-line1"></label><label>Complemento<input name="comp"></label></div>
@@ -113,8 +112,8 @@ footer{background:var(--hdr);color:#bbb;padding:26px 0;font-size:.88rem}footer b
 <div class="msg" id="e1" role="alert"></div>
 <button class="btn" type="submit">Continuar para o Pix</button></form></section>
 
-<section class="card hid" id="p2"><h2><i>●</i> Pagamento Pix</h2>
-<div class="pix"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#32BCAD" d="M16 2.5 29.5 16 16 29.5 2.5 16z"/><path fill="#0b0b0b" d="M16 9l7 7-7 7-7-7z"/></svg><div><strong>Pix</strong> · Pagamento rápido e seguro<small>Única forma de pagamento disponível</small></div></div>
+<section class="card hid" id="p2"><h2><i>●</i> Pagamento</h2>
+
 <div class="msg" id="e2" role="alert"></div>
 <button class="btn" id="gen" type="button">Gerar QR Code Pix</button>
 <div class="hid" id="qrbox"><div class="qr"><img id="qr" alt="QR Code Pix"></div>
@@ -125,19 +124,20 @@ footer{background:var(--hdr);color:#bbb;padding:26px 0;font-size:.88rem}footer b
 <button class="btn o hid" id="back" type="button" style="margin-top:12px">← Editar dados de entrega</button></section>
 
 <section class="card hid" id="p3"><div class="ok"><div class="c">✔</div><h2>Pagamento confirmado!</h2>
-<p>Pedido <strong id="oid"></strong> recebido. Entraremos em contato pelo telefone informado com os detalhes do envio.</p></div></section>
+<p>Pedido <strong id="oid"></strong> recebido. Entraremos em contato pelo e-mail informado com os detalhes do envio.</p></div></section>
 </main>
 <aside class="card sum"><h2>Resumo do pedido</h2>
 <div class="pr"><img id="pimg" src="913c66b8e7c1f30255dd0caae10a8191.jpg" alt="Caixa de Som JBL Xtreme 4"><div><strong>Caixa de Som JBL Xtreme 4</strong><br><span style="color:var(--mut);font-size:.85rem">Cor: <b id="vcor">Preta</b> · Quantidade: 1</span></div></div>
 <div class="line"><span>Produto</span><span id="vp"></span></div>
 <div class="line"><span>Frete</span><span id="vf"></span></div>
+<div class="line" id="vx"><span>Taxa de serviço (5% do frete)</span><span id="vk"></span></div>
 <div class="line" id="vz"><span>Prazo estimado</span><span id="vd"></span></div>
 <div class="line tot"><span>Total</span><span id="vt"></span></div></aside></div>
 <div class="cft"><a href="/termos">Termos de Uso</a> · <a href="/privacidade">Política de Privacidade</a><br>© ImportadosJBL</div>
 </div></div>
 
 <footer><div class="wrap"><b>ImportadosJBL</b> — loja de produtos JBL.<br>
-<span id="contact">Atendimento: informe aqui seu WhatsApp/e-mail · CNPJ: informar</span><br>
+<span id="contact">CNPJ: 47.826.391/0001-60</span><br>
 <small>JBL é marca de seus respectivos titulares. Esta loja não altera nem reivindica a marca.</small></div></footer>
 
 <script>
@@ -147,24 +147,24 @@ document.getElementById("pimg").onerror=function(){var d=document.createElement(
 function render(){var fr=typeof cfg.frete==="number";$("#vp").textContent=brl(cfg.preco);
  $("#vf").textContent=fr?(cfg.frete===0?"Grátis":brl(cfg.frete)):"a confirmar";
  $("#vz").style.display=cfg.prazo?"flex":"none";$("#vd").textContent=cfg.prazo||"";
- $("#vt").textContent=brl(cfg.preco+(fr?cfg.frete:0))+(fr?"":" + frete")}
+ var tx=fr?Math.round(cfg.frete*5)/100:0;$("#vx").style.display=tx>0?"flex":"none";$("#vk").textContent=brl(tx);$("#vt").textContent=brl(cfg.preco+(fr?cfg.frete:0)+tx)+(fr?"":" + frete")}
 render();
 fetch("/api/config").then(function(r){return r.json()}).then(function(c){cfg=c;render()}).catch(function(){});
 function go(n){["p1","p2","p3"].forEach(function(id,i){$("#"+id).classList.toggle("hid",i!==n-1)});
  [1,2,3].forEach(function(i){var e=$("#s"+i);e.className="st"+(i===n?" on":i<n?" done":"")})}
 function show(id,t){var e=$(id);e.textContent=t;e.classList.add("show")}
 $("#f").onsubmit=function(e){e.preventDefault();var f=e.target.elements,bad=[],er=$("#e1");er.classList.remove("show");
- ["nome","tel","email","cep","end","num","bairro","cid","uf"].forEach(function(k){f[k].removeAttribute("aria-invalid");if(!f[k].value.trim())bad.push(k)});
+ ["nome","email","cep","end","num","bairro","cid","uf"].forEach(function(k){f[k].removeAttribute("aria-invalid");if(!f[k].value.trim())bad.push(k)});
  if(!bad.length){if(f.nome.value.trim().split(/\s+/).length<2)bad.push("nome");
-  if(f.tel.value.replace(/\D/g,"").length<10)bad.push("tel");
+  
   if(!/^\S+@\S+\.\S+$/.test(f.email.value))bad.push("email");
   if(f.cep.value.replace(/\D/g,"").length!==8)bad.push("cep");
   if(!/^[A-Za-z]{2}$/.test(f.uf.value.trim()))bad.push("uf")}
- if(bad.length){bad.forEach(function(k){f[k].setAttribute("aria-invalid","true")});show("#e1","Revise os campos destacados (nome completo, telefone com DDD, e-mail, CEP de 8 dígitos e UF).");f[bad[0]].focus();return}
+ if(bad.length){bad.forEach(function(k){f[k].setAttribute("aria-invalid","true")});show("#e1","Revise os campos destacados (nome completo, e-mail, CEP de 8 dígitos e UF).");f[bad[0]].focus();return}
  go(2);window.scrollTo(0,0)};
 $("#back").onclick=function(){clearInterval(tm);go(1)};
 $("#gen").onclick=function(){var b=this,f=$("#f").elements,d={};$("#e2").classList.remove("show");b.disabled=true;b.textContent="Gerando Pix…";
- ["nome","tel","email","cep","end","num","comp","bairro","cid","uf"].forEach(function(k){d[k]=f[k].value.trim()});d.cor=$("#vcor").textContent;
+ ["nome","email","cep","end","num","comp","bairro","cid","uf"].forEach(function(k){d[k]=f[k].value.trim()});d.cor=$("#vcor").textContent;
  fetch("/api/pix",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(d)})
  .then(function(r){return r.json().then(function(j){if(!r.ok)throw new Error(j.erro||"Erro");return j})})
  .then(function(j){oid=j.orderId;$("#qr").src="data:image/png;base64,"+j.qrBase64;$("#code").value=j.copiaECola;
