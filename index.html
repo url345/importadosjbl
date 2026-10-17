@@ -45,9 +45,6 @@ label{font-size:.88rem;font-weight:600;display:grid;gap:4px}
 input,textarea{font:inherit;padding:12px;border-radius:10px;border:1px solid var(--bd);background:var(--card);color:var(--tx);width:100%}
 input:focus,textarea:focus{outline:2px solid var(--or);border-color:var(--or)}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.sum{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px}
-.sum div{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--bd)}
-.sum div:last-child{border:0;font-weight:900;font-size:1.15rem}
 .co{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:start}
 .msg{display:none;border-radius:10px;padding:12px;font-size:.92rem;background:#fff1e6;color:#5a2600;border:1px solid var(--or)}
 .msg.show{display:block}
@@ -57,8 +54,9 @@ footer{background:var(--hdr);color:#bbb;padding:26px 0;font-size:.88rem}footer b
 #wel.show{display:grid}
 #wel div{background:#0b0b0b;color:#fff;border:2px solid var(--or);border-radius:18px;max-width:440px;padding:28px 24px;text-align:center}
 #wel h3{font-size:1.4rem;margin:0 0 10px;color:var(--or)}#wel p{margin:0 0 18px;color:#ddd}
-.sw{display:flex;gap:10px;margin:0 0 6px;flex-wrap:wrap}.swb{display:flex;align-items:center;gap:8px;padding:10px 14px;border:2px solid var(--bd);border-radius:10px;background:var(--card);color:var(--tx);font:inherit;font-weight:600;cursor:pointer}.swb i{width:18px;height:18px;border-radius:50%;border:1px solid #888}.swb.on{border-color:var(--or)}.rev{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px;max-width:520px}.rev strong{display:block}#revs{display:grid;gap:12px}.rev .stars{font-size:1.05rem;letter-spacing:2px;margin-top:2px}.rev p{margin:6px 0 0}#checkoutView{display:none}body.co-on #checkoutView{display:block}body.co-on #store{display:none}
+.sw{display:flex;gap:10px;margin:0 0 6px;flex-wrap:wrap}.swb{display:flex;align-items:center;gap:8px;padding:10px 14px;border:2px solid var(--bd);border-radius:10px;background:var(--card);color:var(--tx);font:inherit;font-weight:600;cursor:pointer}.swb i{width:18px;height:18px;border-radius:50%;border:1px solid #888}.swb.on{border-color:var(--or)}.rev{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px;max-width:520px}.rev strong{display:block}#revs{display:grid;gap:12px}.rev .av{width:64px;height:64px;border-radius:10px;object-fit:cover;float:right;margin-left:12px}.rev .stars{font-size:1.05rem;letter-spacing:2px;margin-top:2px}.rev p{margin:6px 0 0}#checkoutView{display:none}body.co-on #checkoutView{display:block}body.co-on #store{display:none}
 @media(max-width:760px){.prod,.co,.grid3{grid-template-columns:1fr}.row{grid-template-columns:1fr}nav a:not(.cta){display:none}}
+#checkoutView{--bg:#0b0b0b;--card:#151515;--bd:#2a2a2a;--tx:#fff;--mut:#a8a8a8;--or:#FF6B00;--ok:#22c55e;--er:#ff5c5c;background:#0b0b0b;color:#fff;min-height:100vh;line-height:1.5}#checkoutView *{box-sizing:border-box}#checkoutView .lnk{background:none;border:1px solid var(--bd);color:var(--tx);border-radius:10px;padding:8px 12px;font:inherit;font-size:.85rem;cursor:pointer}#checkoutView .wrap{max-width:980px;margin:0 auto;padding:0 16px 40px}#checkoutView .chdr{display:flex;justify-content:space-between;align-items:center;padding:18px 0}#checkoutView .logo{font-weight:900;font-size:1.4rem}#checkoutView .logo b{color:var(--or)}#checkoutView .sec{font-size:.8rem;color:var(--mut)}#checkoutView .steps{display:flex;gap:6px;margin:4px 0 22px}#checkoutView .st{flex:1;text-align:center;font-size:.78rem;color:var(--mut);border-top:4px solid var(--bd);padding-top:6px}#checkoutView .st.on{color:var(--tx);border-color:var(--or);font-weight:700}#checkoutView .st.done{border-color:var(--ok);color:var(--ok)}#checkoutView .grid{display:grid;grid-template-columns:1.25fr 1fr;gap:20px;align-items:start}#checkoutView .card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:20px}#checkoutView h2{margin:0 0 14px;font-size:1.15rem}#checkoutView h2 i{font-style:normal;color:var(--or)}#checkoutView form{display:grid;gap:12px}#checkoutView .r2{display:grid;grid-template-columns:1fr 1fr;gap:12px}#checkoutView .r3{display:grid;grid-template-columns:1fr 2fr 1fr;gap:12px}#checkoutView label{font-size:.82rem;color:var(--mut);display:grid;gap:4px}#checkoutView input{font:inherit;color:var(--tx);background:#0e0e0e;border:1px solid var(--bd);border-radius:10px;padding:12px;width:100%}#checkoutView input:focus{outline:2px solid var(--or);border-color:var(--or)}#checkoutView input[aria-invalid=true]{border-color:var(--er)}#checkoutView .btn{width:100%;border:0;border-radius:12px;padding:16px;font:inherit;font-weight:800;font-size:1.05rem;background:var(--or);color:#000;cursor:pointer}#checkoutView .btn:disabled{opacity:.6;cursor:wait}#checkoutView .btn.o{background:transparent;border:2px solid var(--or);color:var(--or)}#checkoutView .msg{display:none;padding:12px;border-radius:10px;font-size:.9rem;border:1px solid var(--er);color:#ffb3b3;background:#2a1010}#checkoutView .msg.show{display:block}#checkoutView .line{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--bd);font-size:.95rem}#checkoutView .tot{font-size:1.3rem;font-weight:900;border:0;color:var(--or)}#checkoutView .pr{display:flex;gap:12px;align-items:center;padding-bottom:12px;border-bottom:1px solid var(--bd)}#checkoutView .pr img,#checkoutView .ph{width:72px;height:72px;border-radius:12px;object-fit:cover;background:#222;display:grid;place-items:center;font-size:1.8rem}#checkoutView .pix{display:flex;gap:12px;align-items:center;border:2px solid var(--or);border-radius:12px;padding:14px;margin-bottom:14px}#checkoutView .pix svg{width:34px;height:34px;flex:none}#checkoutView .pix small{color:var(--mut);display:block}#checkoutView .qr{text-align:center}#checkoutView .qr img{width:220px;max-width:70%;background:#fff;padding:10px;border-radius:12px}#checkoutView textarea{width:100%;height:84px;font:.78rem monospace;color:var(--tx);background:#0e0e0e;border:1px solid var(--bd);border-radius:10px;padding:10px;resize:none;margin:10px 0}#checkoutView .stat{display:flex;align-items:center;gap:8px;justify-content:center;margin:12px 0;color:var(--or);font-weight:700}#checkoutView .dot{width:10px;height:10px;border-radius:50%;background:var(--or);animation:p 1.2s infinite}#checkoutView ol{padding-left:20px;color:var(--mut);font-size:.9rem}#checkoutView .hid{display:none}#checkoutView .ok{text-align:center;padding:30px 10px}#checkoutView .ok .c{font-size:3rem;color:var(--ok)}#checkoutView .cft{margin-top:26px;text-align:center;font-size:.8rem;color:var(--mut)}#checkoutView .cft a{color:var(--or)}@keyframes p{50%{opacity:.25}}@media(max-width:760px){#checkoutView .grid{grid-template-columns:1fr}#checkoutView .r3{grid-template-columns:1fr 1fr}#checkoutView .sum{order:-1}}
 </style>
 </head>
 <body>
@@ -73,7 +71,7 @@ footer{background:var(--hdr);color:#bbb;padding:26px 0;font-size:.88rem}footer b
 <div class="photo"><div><big>🔊</big>Coloque aqui a foto oficial do produto JBL<br>(sem alterar a marca)</div></div>
 <div>
 <span class="badge">OFERTA ESPECIAL</span>
-<h2 id="pname" style="margin:10px 0 0">Produto JBL</h2>
+<h2 id="pname" style="margin:10px 0 0">Caixa de Som JBL Xtreme 4</h2>
 <div class="price" id="pprice">R$ 60,97</div>
 <div class="sub">Entrega em até 7 dias · frete mostrado antes da confirmação</div>
 <div class="sw" role="radiogroup" aria-label="Cor"><button type="button" class="swb on" data-c="Preta" role="radio" aria-checked="true"><i style="background:#111"></i>Preta</button><button type="button" class="swb" data-c="Branca" role="radio" aria-checked="false"><i style="background:#fff"></i>Branca</button></div>
@@ -96,69 +94,96 @@ footer{background:var(--hdr);color:#bbb;padding:26px 0;font-size:.88rem}footer b
 <div class="rev"><strong>Mariana Costa</strong><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><p>“Demorou um pouquinho mais do que eu esperava, mas chegou tudo certo. A caixa de som é muito boa!”</p></div>
 <div class="rev"><strong>Gabriel Oliveira</strong><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><p>“Recebi minha JBL dentro do prazo, lacrada e em ótimo estado. Compra tranquila!”</p></div>
 <div class="rev"><strong>Ana Beatriz Souza</strong><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><p>“Achei que ia demorar mais, mas o pedido chegou direitinho. Gostei bastante da qualidade do produto!”</p></div>
-<div class="rev"><strong>Lucas Carvalho</strong><p>Chegou certinho antes do prazo.</p></div>
+<div class="rev"><img class="av" src="fa007a26b8db079606eee43983b46058.jpg" alt="Foto enviada por Lucas Carvalho" onerror="this.remove()"><strong>Lucas Carvalho</strong><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><p>Chegou certinho antes do prazo.</p></div>
 <p class="safe" style="margin-top:12px">Comprou? Deixe também sua avaliação de 1 a 5 estrelas e seu comentário.</p></div>
 <p class="safe" style="margin-top:10px">Somente avaliações de compradores reais são publicadas.</p></div></section>
 
 </div>
-<section class="alt" id="checkoutView"><div class="wrap"><button type="button" id="back" class="btn b2" style="width:auto;display:inline-block;padding:10px 16px;font-size:.9rem;margin:0 0 14px">← Voltar à loja</button><h2>Finalizar compra</h2>
-<div class="co">
+<div id="checkoutView"><div class="wrap">
+<div class="chdr"><div class="logo">Importados<b>JBL</b></div><div style="display:flex;gap:12px;align-items:center"><div class="sec">🔒 Checkout seguro</div><button type="button" id="tostore" class="lnk">← Voltar à loja</button></div></div>
+<div class="steps"><div class="st on" id="s1">1. Dados de entrega</div><div class="st" id="s2">2. Pagamento Pix</div><div class="st" id="s3">3. Confirmação</div></div>
+<div class="grid"><main>
+<section class="card" id="p1"><h2><i>●</i> Dados de entrega</h2>
 <form id="f" novalidate>
-<label>Nome completo<input name="nome" autocomplete="name" required></label>
-<label>Telefone (com DDD)<input name="tel" type="tel" autocomplete="tel" inputmode="tel" required></label>
-<div class="row"><label>CEP<input name="cep" autocomplete="postal-code" inputmode="numeric" maxlength="9" required></label>
-<label>Número<input name="num" required></label></div>
-<label>Endereço (rua, bairro, complemento)<input name="end" autocomplete="street-address" required></label>
-<div class="row"><label>Cidade<input name="cid" required></label><label>Estado (UF)<input name="uf" maxlength="2" required></label></div>
-<div class="msg" id="err" role="alert"></div>
-<button class="btn b1" type="submit">🔒 Ir para o pagamento seguro</button>
-<p class="safe">O pagamento (Pix ou cartão) acontece na página segura do provedor de pagamentos. Esta loja não coleta nem armazena dados de cartão.</p>
-</form>
-<aside class="sum" aria-label="Resumo do pedido">
-<strong>Resumo do pedido</strong>
-<div><span id="sn">Produto JBL × 1</span><span id="sp">R$ 60,97</span></div>
-<div><span>Prazo de entrega</span><span>7 dias</span></div>
-<div><span>Frete</span><span id="sf">a confirmar</span></div>
-<div><span>Total</span><span id="st">R$ 60,97</span></div>
-</aside></div></div></section>
+<label>Nome completo<input name="nome" autocomplete="name"></label>
+<div class="r2"><label>Telefone (com DDD)<input name="tel" type="tel" inputmode="tel" autocomplete="tel"></label>
+<label>E-mail (exigido pelo Pix)<input name="email" type="email" autocomplete="email"></label></div>
+<div class="r2"><label>CEP<input name="cep" inputmode="numeric" maxlength="9" autocomplete="postal-code"></label>
+<label>Bairro<input name="bairro"></label></div>
+<div class="r3"><label>Número<input name="num"></label><label>Endereço (rua)<input name="end" autocomplete="address-line1"></label><label>Complemento<input name="comp"></label></div>
+<div class="r2"><label>Cidade<input name="cid"></label><label>Estado (UF)<input name="uf" maxlength="2"></label></div>
+<div class="msg" id="e1" role="alert"></div>
+<button class="btn" type="submit">Continuar para o Pix</button></form></section>
+
+<section class="card hid" id="p2"><h2><i>●</i> Pagamento Pix</h2>
+<div class="pix"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#32BCAD" d="M16 2.5 29.5 16 16 29.5 2.5 16z"/><path fill="#0b0b0b" d="M16 9l7 7-7 7-7-7z"/></svg><div><strong>Pix</strong> · Pagamento rápido e seguro<small>Única forma de pagamento disponível</small></div></div>
+<div class="msg" id="e2" role="alert"></div>
+<button class="btn" id="gen" type="button">Gerar QR Code Pix</button>
+<div class="hid" id="qrbox"><div class="qr"><img id="qr" alt="QR Code Pix"></div>
+<textarea id="code" readonly aria-label="Pix Copia e Cola"></textarea>
+<button class="btn o" id="cp" type="button">Copiar código Pix</button>
+<div class="stat"><span class="dot"></span><span id="st">Aguardando pagamento…</span></div>
+<ol><li>Abra o app do seu banco e escolha Pix.</li><li>Pague lendo o QR Code ou usando “Pix Copia e Cola”.</li><li>Confira o valor e confirme. Esta tela atualiza sozinha quando o pagamento for confirmado.</li></ol></div>
+<button class="btn o hid" id="back" type="button" style="margin-top:12px">← Editar dados de entrega</button></section>
+
+<section class="card hid" id="p3"><div class="ok"><div class="c">✔</div><h2>Pagamento confirmado!</h2>
+<p>Pedido <strong id="oid"></strong> recebido. Entraremos em contato pelo telefone informado com os detalhes do envio.</p></div></section>
+</main>
+<aside class="card sum"><h2>Resumo do pedido</h2>
+<div class="pr"><img id="pimg" src="/produto.jpg" alt="Caixa de Som JBL Xtreme 4"><div><strong>Caixa de Som JBL Xtreme 4</strong><br><span style="color:var(--mut);font-size:.85rem">Cor: <b id="vcor">Preta</b> · Quantidade: 1</span></div></div>
+<div class="line"><span>Produto</span><span id="vp"></span></div>
+<div class="line"><span>Frete</span><span id="vf"></span></div>
+<div class="line" id="vz"><span>Prazo estimado</span><span id="vd"></span></div>
+<div class="line tot"><span>Total</span><span id="vt"></span></div></aside></div>
+<div class="cft"><a href="/termos">Termos de Uso</a> · <a href="/privacidade">Política de Privacidade</a><br>© ImportadosJBL</div>
+</div></div>
 
 <footer><div class="wrap"><b>ImportadosJBL</b> — loja de produtos JBL.<br>
 <span id="contact">Atendimento: informe aqui seu WhatsApp/e-mail · CNPJ: informar</span><br>
 <small>JBL é marca de seus respectivos titulares. Esta loja não altera nem reivindica a marca.</small></div></footer>
 
 <script>
-// ===== CONFIGURAÇÃO DA LOJA (edite estes valores) =====
-var CFG={
- produto:"Produto JBL",       // nome real do modelo
- preco:60.97,
- frete:null,                  // número (ex.: 15.90) ou null = "a confirmar"
- linkPagamento:""             // link/checkout hospedado do seu provedor (Mercado Pago, Stripe, Pagar.me…)
-};
-// ======================================================
-function brl(v){return "R$ "+v.toFixed(2).replace(".",",")}
+var $=function(s){return document.querySelector(s)},brl=function(v){return"R$ "+v.toFixed(2).replace(".",",")};
+var cfg={preco:60.97,frete:null,prazo:"7 dias"},oid=null,tm=null;
+document.getElementById("pimg").onerror=function(){var d=document.createElement("div");d.className="ph";d.textContent="🔊";this.replaceWith(d)};
+function render(){var fr=typeof cfg.frete==="number";$("#vp").textContent=brl(cfg.preco);
+ $("#vf").textContent=fr?(cfg.frete===0?"Grátis":brl(cfg.frete)):"a confirmar";
+ $("#vz").style.display=cfg.prazo?"flex":"none";$("#vd").textContent=cfg.prazo||"";
+ $("#vt").textContent=brl(cfg.preco+(fr?cfg.frete:0))+(fr?"":" + frete")}
+render();
+fetch("/api/config").then(function(r){return r.json()}).then(function(c){cfg=c;render()}).catch(function(){});
+function go(n){["p1","p2","p3"].forEach(function(id,i){$("#"+id).classList.toggle("hid",i!==n-1)});
+ [1,2,3].forEach(function(i){var e=$("#s"+i);e.className="st"+(i===n?" on":i<n?" done":"")})}
+function show(id,t){var e=$(id);e.textContent=t;e.classList.add("show")}
+$("#f").onsubmit=function(e){e.preventDefault();var f=e.target.elements,bad=[],er=$("#e1");er.classList.remove("show");
+ ["nome","tel","email","cep","end","num","bairro","cid","uf"].forEach(function(k){f[k].removeAttribute("aria-invalid");if(!f[k].value.trim())bad.push(k)});
+ if(!bad.length){if(f.nome.value.trim().split(/\s+/).length<2)bad.push("nome");
+  if(f.tel.value.replace(/\D/g,"").length<10)bad.push("tel");
+  if(!/^\S+@\S+\.\S+$/.test(f.email.value))bad.push("email");
+  if(f.cep.value.replace(/\D/g,"").length!==8)bad.push("cep");
+  if(!/^[A-Za-z]{2}$/.test(f.uf.value.trim()))bad.push("uf")}
+ if(bad.length){bad.forEach(function(k){f[k].setAttribute("aria-invalid","true")});show("#e1","Revise os campos destacados (nome completo, telefone com DDD, e-mail, CEP de 8 dígitos e UF).");f[bad[0]].focus();return}
+ go(2);window.scrollTo(0,0)};
+$("#back").onclick=function(){clearInterval(tm);go(1)};
+$("#gen").onclick=function(){var b=this,f=$("#f").elements,d={};$("#e2").classList.remove("show");b.disabled=true;b.textContent="Gerando Pix…";
+ ["nome","tel","email","cep","end","num","comp","bairro","cid","uf"].forEach(function(k){d[k]=f[k].value.trim()});d.cor=$("#vcor").textContent;
+ fetch("/api/pix",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(d)})
+ .then(function(r){return r.json().then(function(j){if(!r.ok)throw new Error(j.erro||"Erro");return j})})
+ .then(function(j){oid=j.orderId;$("#qr").src="data:image/png;base64,"+j.qrBase64;$("#code").value=j.copiaECola;
+  $("#vt").textContent=brl(j.total);$("#qrbox").classList.remove("hid");$("#back").classList.remove("hid");b.classList.add("hid");poll()})
+ .catch(function(err){b.disabled=false;b.textContent="Gerar QR Code Pix";show("#e2","Não foi possível gerar o Pix agora. "+(err.message==="Failed to fetch"?"O servidor de pagamento não está conectado.":err.message))})};
+$("#cp").onclick=function(){var c=$("#code");c.select();var b=this,ok=function(){b.textContent="Código copiado ✔";setTimeout(function(){b.textContent="Copiar código Pix"},2000)};
+ if(navigator.clipboard)navigator.clipboard.writeText(c.value).then(ok,function(){document.execCommand("copy");ok()});else{document.execCommand("copy");ok()}};
+function poll(){clearInterval(tm);tm=setInterval(function(){fetch("/api/status/"+oid).then(function(r){return r.json()}).then(function(j){
+ if(j.status==="approved"){clearInterval(tm);$("#oid").textContent="#"+oid.slice(0,8).toUpperCase();go(3);window.scrollTo(0,0)}
+ else if(j.status==="expired"||j.status==="cancelled"){clearInterval(tm);$("#st").textContent="Pix expirado. Volte e gere um novo código."}}).catch(function(){})},4000)}
+$("#tostore").onclick=function(){clearInterval(tm);document.body.classList.remove("co-on");window.scrollTo(0,0)};
 (function(){
- document.getElementById("pname").textContent=CFG.produto;
- document.getElementById("pprice").textContent=brl(CFG.preco);
- var cor="Preta";function sn(){document.getElementById("sn").textContent=CFG.produto+" "+cor+" × 1"}sn();var sb=document.querySelectorAll(".swb");sb.forEach(function(x){x.onclick=function(){sb.forEach(function(y){y.classList.remove("on");y.setAttribute("aria-checked","false")});x.classList.add("on");x.setAttribute("aria-checked","true");cor=x.dataset.c;sn()}});document.querySelectorAll('a[href="#checkout"]').forEach(function(a){a.onclick=function(e){e.preventDefault();document.body.classList.add("co-on");window.scrollTo(0,0)}});document.getElementById("back").onclick=function(){document.body.classList.remove("co-on");window.scrollTo(0,0)};
- document.getElementById("sp").textContent=brl(CFG.preco);
- var tot=CFG.preco,sf=document.getElementById("sf"),st=document.getElementById("st");
- if(CFG.frete===null){sf.textContent="a confirmar";st.textContent=brl(CFG.preco)+" + frete"}
- else{sf.textContent=CFG.frete===0?"Grátis":brl(CFG.frete);st.textContent=brl(CFG.preco+CFG.frete)}
- 
- 
- 
- 
+ var sb=document.querySelectorAll(".swb");
+ sb.forEach(function(x){x.onclick=function(){sb.forEach(function(y){y.classList.remove("on");y.setAttribute("aria-checked","false")});x.classList.add("on");x.setAttribute("aria-checked","true");$("#vcor").textContent=x.dataset.c}});
  var d=document.getElementById("det"),b=document.getElementById("descbox");
  d.onclick=function(){var o=b.classList.toggle("open");d.setAttribute("aria-expanded",o)};
- var f=document.getElementById("f"),err=document.getElementById("err");
- f.onsubmit=function(e){
-  e.preventDefault();err.className="msg";
-  var v=f.elements,miss=["nome","tel","cep","num","end","cid","uf"].filter(function(k){return !v[k].value.trim()});
-  if(miss.length){err.textContent="Preencha todos os campos de entrega para continuar.";err.className="msg show";return}
-  if(v.tel.value.replace(/\D/g,"").length<10){err.textContent="Informe um telefone válido com DDD.";err.className="msg show";return}
-  if(!CFG.linkPagamento){err.textContent="O pagamento ainda não foi conectado. A loja precisa configurar um provedor de pagamentos real para finalizar compras.";err.className="msg show";return}
-  window.location.href=CFG.linkPagamento;
- };
+ document.querySelectorAll('a[href="#checkout"]').forEach(function(a){a.onclick=function(e){e.preventDefault();go(1);document.body.classList.add("co-on");window.scrollTo(0,0)}});
 })();
 </script>
 </body>
