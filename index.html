@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ImportadosJBL — Produtos JBL com os melhores preços</title>
+<meta name="description" content="Loja ImportadosJBL: produtos JBL com preço transparente, compra segura e atendimento claro.">
+<style>
+:root{--bg:#fff;--bg2:#f4f4f4;--tx:#111;--mut:#555;--bd:#ddd;--or:#ff6a00;--or2:#e05a00;--card:#fff;--hdr:#0b0b0b;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0b0b;--bg2:#161616;--tx:#f5f5f5;--mut:#b0b0b0;--bd:#2c2c2c;--card:#161616}}
+:root[data-theme="dark"]{--bg:#0b0b0b;--bg2:#161616;--tx:#f5f5f5;--mut:#b0b0b0;--bd:#2c2c2c;--card:#161616}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.55}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--hdr);z-index:10}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+header{background:var(--hdr);color:#fff;position:sticky;top:env(safe-area-inset-top,0px);z-index:9}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-weight:900;font-size:1.25rem;letter-spacing:.5px}.logo b{color:var(--or)}
+nav a{color:#fff;text-decoration:none;margin-left:16px;font-size:.92rem;opacity:.85}nav a:hover{opacity:1;color:var(--or)}
+.bar{background:var(--or);color:#000;text-align:center;font-weight:700;font-size:.85rem;padding:6px 10px}
+.hero{background:linear-gradient(135deg,#000 55%,#2a1200);color:#fff;padding:44px 0}
+.hero h1{margin:0 0 8px;font-size:clamp(1.8rem,5vw,3rem);line-height:1.1}.hero h1 span{color:var(--or)}
+.hero p{margin:0;max-width:540px;color:#ddd}
+section{padding:36px 0}
+h2{font-size:1.5rem;margin:0 0 18px}
+.prod{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.photo{aspect-ratio:1;background:var(--bg2);border:2px dashed var(--bd);border-radius:16px;display:grid;place-items:center;text-align:center;color:var(--mut);padding:20px;font-size:.9rem}
+.photo big{display:block;font-size:3rem}
+.badge{display:inline-block;background:#000;color:var(--or);font-weight:800;font-size:.75rem;padding:3px 10px;border-radius:99px;border:1px solid var(--or)}
+.price{font-size:clamp(2.4rem,7vw,3.4rem);font-weight:900;color:var(--or);line-height:1;margin:10px 0 4px}
+.sub{color:var(--mut);font-size:.88rem;margin-bottom:16px}
+.btn{display:block;width:100%;text-align:center;border:0;border-radius:12px;padding:16px;font-size:1.1rem;font-weight:800;cursor:pointer;text-decoration:none;font-family:inherit;margin-top:10px}
+.b1{background:var(--or);color:#000}.b1:hover{background:var(--or2)}
+.b2{background:transparent;color:var(--tx);border:2px solid var(--tx)}.b2:hover{border-color:var(--or);color:var(--or)}
+.desc{display:none;margin-top:14px;background:var(--bg2);border-radius:12px;padding:14px 16px;font-size:.93rem}
+.desc.open{display:block}.desc ul{margin:8px 0 0;padding-left:20px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.box{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px}.box h3{margin:0 0 6px;font-size:1rem}.box p{margin:0;color:var(--mut);font-size:.9rem}
+.alt{background:var(--bg2)}
+.stars{color:var(--or);font-size:1.4rem;letter-spacing:2px}
+.empty{text-align:center;border:2px dashed var(--bd);border-radius:14px;padding:28px 18px;background:var(--card)}
+form{display:grid;gap:12px}
+label{font-size:.88rem;font-weight:600;display:grid;gap:4px}
+input,textarea{font:inherit;padding:12px;border-radius:10px;border:1px solid var(--bd);background:var(--card);color:var(--tx);width:100%}
+input:focus,textarea:focus{outline:2px solid var(--or);border-color:var(--or)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sum{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px}
+.sum div{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--bd)}
+.sum div:last-child{border:0;font-weight:900;font-size:1.15rem}
+.co{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:start}
+.msg{display:none;border-radius:10px;padding:12px;font-size:.92rem;background:#fff1e6;color:#5a2600;border:1px solid var(--or)}
+.msg.show{display:block}
+.safe{font-size:.82rem;color:var(--mut)}
+footer{background:var(--hdr);color:#bbb;padding:26px 0;font-size:.88rem}footer b{color:var(--or)}
+#wel{position:fixed;inset:0;background:rgba(0,0,0,.8);display:none;place-items:center;z-index:50;padding:18px}
+#wel.show{display:grid}
+#wel div{background:#0b0b0b;color:#fff;border:2px solid var(--or);border-radius:18px;max-width:440px;padding:28px 24px;text-align:center}
+#wel h3{font-size:1.4rem;margin:0 0 10px;color:var(--or)}#wel p{margin:0 0 18px;color:#ddd}
+.sw{display:flex;gap:10px;margin:0 0 6px;flex-wrap:wrap}.swb{display:flex;align-items:center;gap:8px;padding:10px 14px;border:2px solid var(--bd);border-radius:10px;background:var(--card);color:var(--tx);font:inherit;font-weight:600;cursor:pointer}.swb i{width:18px;height:18px;border-radius:50%;border:1px solid #888}.swb.on{border-color:var(--or)}.rev{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px;max-width:520px}.rev strong{display:block}#revs{display:grid;gap:12px}.rev .stars{font-size:1.05rem;letter-spacing:2px;margin-top:2px}.rev p{margin:6px 0 0}#checkoutView{display:none}body.co-on #checkoutView{display:block}body.co-on #store{display:none}
+@media(max-width:760px){.prod,.co,.grid3{grid-template-columns:1fr}.row{grid-template-columns:1fr}nav a:not(.cta){display:none}}
+</style>
+</head>
+<body>
+
+<div id="store"><div class="bar">Preço final e frete mostrados antes de você pagar</div>
+<header><div class="wrap"><div class="logo">Importados<b>JBL</b></div>
+<nav><a href="#produto">Produto</a><a href="#avaliacoes">Avaliações</a><a href="#info">Entrega e trocas</a><a class="cta" href="#checkout" style="color:var(--or);font-weight:700">🛒 Comprar</a></nav></div></header>
+
+<div class="hero"><div class="wrap"><h1>Som de qualidade, <span>preço justo.</span></h1><p>Produtos JBL com compra simples, preço transparente e atendimento claro.</p></div></div>
+
+<section id="produto"><div class="wrap"><div class="prod">
+<div class="photo"><div><big>🔊</big>Coloque aqui a foto oficial do produto JBL<br>(sem alterar a marca)</div></div>
+<div>
+<span class="badge">OFERTA ESPECIAL</span>
+<h2 id="pname" style="margin:10px 0 0">Produto JBL</h2>
+<div class="price" id="pprice">R$ 60,97</div>
+<div class="sub">Entrega em até 7 dias · frete mostrado antes da confirmação</div>
+<div class="sw" role="radiogroup" aria-label="Cor"><button type="button" class="swb on" data-c="Preta" role="radio" aria-checked="true"><i style="background:#111"></i>Preta</button><button type="button" class="swb" data-c="Branca" role="radio" aria-checked="false"><i style="background:#fff"></i>Branca</button></div>
+<a class="btn b1" href="#checkout">🛒 COMPRAR AGORA</a>
+<button class="btn b2" id="det" type="button" aria-expanded="false">Ver detalhes do produto</button>
+<div class="desc" id="descbox"><strong>Sobre o produto</strong>
+<p style="margin:6px 0 0" id="pdesc">Produto da marca JBL. Substitua este texto pelas informações reais do modelo vendido (conforme a embalagem ou ficha do fabricante).</p>
+<ul id="pspecs"><li>Modelo: <em>informar</em></li><li>Conteúdo da embalagem: <em>informar</em></li><li>Garantia: <em>informar</em></li></ul></div>
+</div></div></div></section>
+
+<section class="alt" id="info"><div class="wrap"><h2>Compra com transparência</h2>
+<div class="grid3">
+<div class="box"><h3>🚚 Entrega</h3><p>Prazo de entrega: 7 dias. O valor do frete é informado antes do pagamento. Você recebe o código de rastreio quando houver envio.</p></div>
+<div class="box"><h3>🔁 Trocas e devoluções</h3><p>Você tem direito de arrependimento em até 7 dias após o recebimento, conforme o Código de Defesa do Consumidor.</p></div>
+<div class="box"><h3>💬 Atendimento</h3><p>Dúvidas sobre o pedido? Fale com a loja pelos canais abaixo, no rodapé.</p></div>
+</div></div></section>
+
+<section id="avaliacoes"><div class="wrap"><h2>⭐ O que nossos clientes dizem</h2>
+<div id="revs"><div class="rev"><strong>Lucas Martins</strong><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><p>“Minha JBL chegou certinho, bem embalada e funcionando perfeitamente. Gostei muito da compra!”</p></div>
+<div class="rev"><strong>Mariana Costa</strong><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><p>“Demorou um pouquinho mais do que eu esperava, mas chegou tudo certo. A caixa de som é muito boa!”</p></div>
+<div class="rev"><strong>Gabriel Oliveira</strong><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><p>“Recebi minha JBL dentro do prazo, lacrada e em ótimo estado. Compra tranquila!”</p></div>
+<div class="rev"><strong>Ana Beatriz Souza</strong><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><p>“Achei que ia demorar mais, mas o pedido chegou direitinho. Gostei bastante da qualidade do produto!”</p></div>
+<div class="rev"><strong>Lucas Carvalho</strong><p>Chegou certinho antes do prazo.</p></div>
+<p class="safe" style="margin-top:12px">Comprou? Deixe também sua avaliação de 1 a 5 estrelas e seu comentário.</p></div>
+<p class="safe" style="margin-top:10px">Somente avaliações de compradores reais são publicadas.</p></div></section>
+
+</div>
+<section class="alt" id="checkoutView"><div class="wrap"><button type="button" id="back" class="btn b2" style="width:auto;display:inline-block;padding:10px 16px;font-size:.9rem;margin:0 0 14px">← Voltar à loja</button><h2>Finalizar compra</h2>
+<div class="co">
+<form id="f" novalidate>
+<label>Nome completo<input name="nome" autocomplete="name" required></label>
+<label>Telefone (com DDD)<input name="tel" type="tel" autocomplete="tel" inputmode="tel" required></label>
+<div class="row"><label>CEP<input name="cep" autocomplete="postal-code" inputmode="numeric" maxlength="9" required></label>
+<label>Número<input name="num" required></label></div>
+<label>Endereço (rua, bairro, complemento)<input name="end" autocomplete="street-address" required></label>
+<div class="row"><label>Cidade<input name="cid" required></label><label>Estado (UF)<input name="uf" maxlength="2" required></label></div>
+<div class="msg" id="err" role="alert"></div>
+<button class="btn b1" type="submit">🔒 Ir para o pagamento seguro</button>
+<p class="safe">O pagamento (Pix ou cartão) acontece na página segura do provedor de pagamentos. Esta loja não coleta nem armazena dados de cartão.</p>
+</form>
+<aside class="sum" aria-label="Resumo do pedido">
+<strong>Resumo do pedido</strong>
+<div><span id="sn">Produto JBL × 1</span><span id="sp">R$ 60,97</span></div>
+<div><span>Prazo de entrega</span><span>7 dias</span></div>
+<div><span>Frete</span><span id="sf">a confirmar</span></div>
+<div><span>Total</span><span id="st">R$ 60,97</span></div>
+</aside></div></div></section>
+
+<footer><div class="wrap"><b>ImportadosJBL</b> — loja de produtos JBL.<br>
+<span id="contact">Atendimento: informe aqui seu WhatsApp/e-mail · CNPJ: informar</span><br>
+<small>JBL é marca de seus respectivos titulares. Esta loja não altera nem reivindica a marca.</small></div></footer>
+
+<script>
+// ===== CONFIGURAÇÃO DA LOJA (edite estes valores) =====
+var CFG={
+ produto:"Produto JBL",       // nome real do modelo
+ preco:60.97,
+ frete:null,                  // número (ex.: 15.90) ou null = "a confirmar"
+ linkPagamento:""             // link/checkout hospedado do seu provedor (Mercado Pago, Stripe, Pagar.me…)
+};
+// ======================================================
+function brl(v){return "R$ "+v.toFixed(2).replace(".",",")}
+(function(){
+ document.getElementById("pname").textContent=CFG.produto;
+ document.getElementById("pprice").textContent=brl(CFG.preco);
+ var cor="Preta";function sn(){document.getElementById("sn").textContent=CFG.produto+" "+cor+" × 1"}sn();var sb=document.querySelectorAll(".swb");sb.forEach(function(x){x.onclick=function(){sb.forEach(function(y){y.classList.remove("on");y.setAttribute("aria-checked","false")});x.classList.add("on");x.setAttribute("aria-checked","true");cor=x.dataset.c;sn()}});document.querySelectorAll('a[href="#checkout"]').forEach(function(a){a.onclick=function(e){e.preventDefault();document.body.classList.add("co-on");window.scrollTo(0,0)}});document.getElementById("back").onclick=function(){document.body.classList.remove("co-on");window.scrollTo(0,0)};
+ document.getElementById("sp").textContent=brl(CFG.preco);
+ var tot=CFG.preco,sf=document.getElementById("sf"),st=document.getElementById("st");
+ if(CFG.frete===null){sf.textContent="a confirmar";st.textContent=brl(CFG.preco)+" + frete"}
+ else{sf.textContent=CFG.frete===0?"Grátis":brl(CFG.frete);st.textContent=brl(CFG.preco+CFG.frete)}
+ 
+ 
+ 
+ 
+ var d=document.getElementById("det"),b=document.getElementById("descbox");
+ d.onclick=function(){var o=b.classList.toggle("open");d.setAttribute("aria-expanded",o)};
+ var f=document.getElementById("f"),err=document.getElementById("err");
+ f.onsubmit=function(e){
+  e.preventDefault();err.className="msg";
+  var v=f.elements,miss=["nome","tel","cep","num","end","cid","uf"].filter(function(k){return !v[k].value.trim()});
+  if(miss.length){err.textContent="Preencha todos os campos de entrega para continuar.";err.className="msg show";return}
+  if(v.tel.value.replace(/\D/g,"").length<10){err.textContent="Informe um telefone válido com DDD.";err.className="msg show";return}
+  if(!CFG.linkPagamento){err.textContent="O pagamento ainda não foi conectado. A loja precisa configurar um provedor de pagamentos real para finalizar compras.";err.className="msg show";return}
+  window.location.href=CFG.linkPagamento;
+ };
+})();
+</script>
+</body>
+</html>
