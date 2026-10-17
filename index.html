@@ -6,8 +6,7 @@
 <title>ImportadosJBL — Produtos JBL com os melhores preços</title>
 <meta name="description" content="Loja ImportadosJBL: produtos JBL com preço transparente, compra segura e atendimento claro.">
 <style>
-:root{--bg:#fff;--bg2:#f4f4f4;--tx:#111;--mut:#555;--bd:#ddd;--or:#ff6a00;--or2:#e05a00;--card:#fff;--hdr:#0b0b0b;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root{--bg:#fff;--bg2:#f4f4f4;--tx:#111;--mut:#555;--bd:#ddd;--or:#ff6a00;--or2:#e05a00;--card:#fff;--hdr:#0b0b0b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0b0b;--bg2:#161616;--tx:#f5f5f5;--mut:#b0b0b0;--bd:#2c2c2c;--card:#161616}}
 :root[data-theme="dark"]{--bg:#0b0b0b;--bg2:#161616;--tx:#f5f5f5;--mut:#b0b0b0;--bd:#2c2c2c;--card:#161616}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
@@ -25,164 +24,525 @@ nav a{color:#fff;text-decoration:none;margin-left:16px;font-size:.92rem;opacity:
 section{padding:36px 0}
 h2{font-size:1.5rem;margin:0 0 18px}
 .prod{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
-.photo{aspect-ratio:1;background:var(--bg2);border:2px dashed var(--bd);border-radius:16px;display:grid;place-items:center;text-align:center;color:var(--mut);padding:20px;font-size:.9rem}
-.photo big{display:block;font-size:3rem}
+.photo{aspect-ratio:1;background:var(--bg2);border:2px dashed var(--bd);border-radius:16px;display:grid;place-items:center;text-align:center;color:var(--mut);padding:20px;font-size:.9rem;position:relative;overflow:hidden}
+.photo big{display:block;font-size:3rem}.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;border-radius:14px}.photo.has{border:0;background:#111}.photo.has .phtxt{display:none}
 .badge{display:inline-block;background:#000;color:var(--or);font-weight:800;font-size:.75rem;padding:3px 10px;border-radius:99px;border:1px solid var(--or)}
 .price{font-size:clamp(2.4rem,7vw,3.4rem);font-weight:900;color:var(--or);line-height:1;margin:10px 0 4px}
 .sub{color:var(--mut);font-size:.88rem;margin-bottom:16px}
 .btn{display:block;width:100%;text-align:center;border:0;border-radius:12px;padding:16px;font-size:1.1rem;font-weight:800;cursor:pointer;text-decoration:none;font-family:inherit;margin-top:10px}
 .b1{background:var(--or);color:#000}.b1:hover{background:var(--or2)}
 .b2{background:transparent;color:var(--tx);border:2px solid var(--tx)}.b2:hover{border-color:var(--or);color:var(--or)}
-.desc{display:none;margin-top:14px;background:var(--bg2);border-radius:12px;padding:14px 16px;font-size:.93rem}
-.desc.open{display:block}.desc ul{margin:8px 0 0;padding-left:20px}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .box{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px}.box h3{margin:0 0 6px;font-size:1rem}.box p{margin:0;color:var(--mut);font-size:.9rem}
 .alt{background:var(--bg2)}
 .stars{color:var(--or);font-size:1.4rem;letter-spacing:2px}
-.empty{text-align:center;border:2px dashed var(--bd);border-radius:14px;padding:28px 18px;background:var(--card)}
 form{display:grid;gap:12px}
 label{font-size:.88rem;font-weight:600;display:grid;gap:4px}
 input,textarea{font:inherit;padding:12px;border-radius:10px;border:1px solid var(--bd);background:var(--card);color:var(--tx);width:100%}
 input:focus,textarea:focus{outline:2px solid var(--or);border-color:var(--or)}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.co{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:start}
 .msg{display:none;border-radius:10px;padding:12px;font-size:.92rem;background:#fff1e6;color:#5a2600;border:1px solid var(--or)}
 .msg.show{display:block}
 .safe{font-size:.82rem;color:var(--mut)}
 footer{background:var(--hdr);color:#bbb;padding:26px 0;font-size:.88rem}footer b{color:var(--or)}
-#wel{position:fixed;inset:0;background:rgba(0,0,0,.8);display:none;place-items:center;z-index:50;padding:18px}
-#wel.show{display:grid}
-#wel div{background:#0b0b0b;color:#fff;border:2px solid var(--or);border-radius:18px;max-width:440px;padding:28px 24px;text-align:center}
-#wel h3{font-size:1.4rem;margin:0 0 10px;color:var(--or)}#wel p{margin:0 0 18px;color:#ddd}
-.sw{display:flex;gap:10px;margin:0 0 6px;flex-wrap:wrap}.swb{display:flex;align-items:center;gap:8px;padding:10px 14px;border:2px solid var(--bd);border-radius:10px;background:var(--card);color:var(--tx);font:inherit;font-weight:600;cursor:pointer}.swb i{width:18px;height:18px;border-radius:50%;border:1px solid #888}.swb.on{border-color:var(--or)}.rev{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px;max-width:520px}.rev strong{display:block}#revs{display:grid;gap:12px}.rev .av{width:36px;height:36px;border-radius:50%;object-fit:cover;flex:none}.who{display:flex;align-items:center;gap:10px}.rev .rvimg{display:block;width:100%;max-width:240px;border-radius:10px;margin-top:10px}.photo{position:relative;overflow:hidden}.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;border-radius:14px}.photo.has{border:0;background:#111}.photo.has .phtxt{display:none}.rev .stars{font-size:1.05rem;letter-spacing:2px;margin-top:2px}.rev p{margin:6px 0 0}#checkoutView{display:none}body.co-on #checkoutView{display:block}body.co-on #store{display:none}
-@media(max-width:760px){.prod,.co,.grid3{grid-template-columns:1fr}.row{grid-template-columns:1fr}nav a:not(.cta){display:none}}
-#checkoutView{--bg:#0b0b0b;--card:#151515;--bd:#2a2a2a;--tx:#fff;--mut:#a8a8a8;--or:#FF6B00;--ok:#22c55e;--er:#ff5c5c;background:#0b0b0b;color:#fff;min-height:100vh;line-height:1.5}#checkoutView *{box-sizing:border-box}#checkoutView .lnk{background:none;border:1px solid var(--bd);color:var(--tx);border-radius:10px;padding:8px 12px;font:inherit;font-size:.85rem;cursor:pointer}#checkoutView .wrap{max-width:980px;margin:0 auto;padding:0 16px 40px}#checkoutView .chdr{display:flex;justify-content:space-between;align-items:center;padding:18px 0}#checkoutView .logo{font-weight:900;font-size:1.4rem}#checkoutView .logo b{color:var(--or)}#checkoutView .sec{font-size:.8rem;color:var(--mut)}#checkoutView .steps{display:flex;gap:6px;margin:4px 0 22px}#checkoutView .st{flex:1;text-align:center;font-size:.78rem;color:var(--mut);border-top:4px solid var(--bd);padding-top:6px}#checkoutView .st.on{color:var(--tx);border-color:var(--or);font-weight:700}#checkoutView .st.done{border-color:var(--ok);color:var(--ok)}#checkoutView .grid{display:grid;grid-template-columns:1.25fr 1fr;gap:20px;align-items:start}#checkoutView .card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:20px}#checkoutView h2{margin:0 0 14px;font-size:1.15rem}#checkoutView h2 i{font-style:normal;color:var(--or)}#checkoutView form{display:grid;gap:12px}#checkoutView .r2{display:grid;grid-template-columns:1fr 1fr;gap:12px}#checkoutView .r3{display:grid;grid-template-columns:1fr 2fr 1fr;gap:12px}#checkoutView label{font-size:.82rem;color:var(--mut);display:grid;gap:4px}#checkoutView input{font:inherit;color:var(--tx);background:#0e0e0e;border:1px solid var(--bd);border-radius:10px;padding:12px;width:100%}#checkoutView input:focus{outline:2px solid var(--or);border-color:var(--or)}#checkoutView input[aria-invalid=true]{border-color:var(--er)}#checkoutView .btn{width:100%;border:0;border-radius:12px;padding:16px;font:inherit;font-weight:800;font-size:1.05rem;background:var(--or);color:#000;cursor:pointer}#checkoutView .btn:disabled{opacity:.6;cursor:wait}#checkoutView .btn.o{background:transparent;border:2px solid var(--or);color:var(--or)}#checkoutView .msg{display:none;padding:12px;border-radius:10px;font-size:.9rem;border:1px solid var(--er);color:#ffb3b3;background:#2a1010}#checkoutView .msg.show{display:block}#checkoutView .line{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--bd);font-size:.95rem}#checkoutView .tot{font-size:1.3rem;font-weight:900;border:0;color:var(--or)}#checkoutView .pr{display:flex;gap:12px;align-items:center;padding-bottom:12px;border-bottom:1px solid var(--bd)}#checkoutView .pr img,#checkoutView .ph{width:72px;height:72px;border-radius:12px;object-fit:cover;background:#222;display:grid;place-items:center;font-size:1.8rem}#checkoutView .pix{display:flex;gap:12px;align-items:center;border:2px solid var(--or);border-radius:12px;padding:14px;margin-bottom:14px}#checkoutView .pix svg{width:34px;height:34px;flex:none}#checkoutView .pix small{color:var(--mut);display:block}#checkoutView .qr{text-align:center}#checkoutView .qr img{width:220px;max-width:70%;background:#fff;padding:10px;border-radius:12px}#checkoutView textarea{width:100%;height:84px;font:.78rem monospace;color:var(--tx);background:#0e0e0e;border:1px solid var(--bd);border-radius:10px;padding:10px;resize:none;margin:10px 0}#checkoutView .stat{display:flex;align-items:center;gap:8px;justify-content:center;margin:12px 0;color:var(--or);font-weight:700}#checkoutView .dot{width:10px;height:10px;border-radius:50%;background:var(--or);animation:p 1.2s infinite}#checkoutView ol{padding-left:20px;color:var(--mut);font-size:.9rem}#checkoutView .hid{display:none}#checkoutView .ok{text-align:center;padding:30px 10px}#checkoutView .ok .c{font-size:3rem;color:var(--ok)}#checkoutView .cft{margin-top:26px;text-align:center;font-size:.8rem;color:var(--mut)}#checkoutView .cft a{color:var(--or)}@keyframes p{50%{opacity:.25}}@media(max-width:760px){#checkoutView .grid{grid-template-columns:1fr}#checkoutView .r3{grid-template-columns:1fr 1fr}#checkoutView .sum{order:-1}}
-</style>
+.sw{display:flex;gap:10px;margin:0 0 6px;flex-wrap:wrap}.swb{display:flex;align-items:center;gap:8px;padding:10px 14px;border:2px solid var(--bd);border-radius:10px;background:var(--card);color:var(--tx);font:inherit;font-weight:600;cursor:pointer}.swb i{width:18px;height:18px;border-radius:50%;border:1px solid #888}.swb.on{border-color:var(--or)}
+.rev{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px;max-width:520px}.rev strong{display:block}#revs{display:grid;gap:12px}.rev .av{width:36px;height:36px;border-radius:50%;object-fit:cover;flex:none}.who{display:flex;align-items:center;gap:10px}.rev .rvimg{display:block;width:100%;max-width:240px;border-radius:10px;margin-top:10px}.rev .stars{font-size:1.05rem;letter-spacing:2px;margin-top:2px}.rev p{margin:6px 0 0}#checkoutView{display:none}body.co-on #checkoutView{display:block}body.co-on #store{display:none}
+@media(max-width:760px){.prod,.grid3{grid-template-columns:1fr}.row{grid-template-columns:1fr}nav a:not(.cta){display:none}}</style>
 </head>
 <body>
-
 <div id="store">
-<header><div class="wrap"><div class="logo">Importados<b>JBL</b></div>
-<nav><a href="#produto">Produto</a><a href="#avaliacoes">Avaliações</a><a href="#info">Entrega e trocas</a></nav></div></header>
+<header>
+  <div class="wrap">
+    <div class="logo">Importados<b>JBL</b></div>
+    <nav>
+      <a href="#produto">Produto</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#info">Entrega e trocas</a>
+    </nav>
+  </div>
+</header>
 
-<div class="hero"><div class="wrap"><h1>Bem-vindo à Importados<span>JBL</span></h1><p>Produtos JBL com compra simples, preço transparente e atendimento claro.</p></div></div>
+<div class="bar">OFERTAS ESPECIAIS • IMPORTADOSJBL</div>
 
-<section id="produto"><div class="wrap"><div class="prod">
-<div class="photo"><div class="phtxt"><big>🔊</big>Foto do produto</div><img id="mainimg" src="913c66b8e7c1f30255dd0caae10a8191.jpg" alt="Caixa de Som JBL Xtreme 4" onload="this.parentNode.classList.add('has');this.style.display=''" onerror="this.style.display='none'"></div>
-<div>
-<span class="badge">OFERTA ESPECIAL</span>
-<h2 id="pname" style="margin:10px 0 0">Caixa de Som JBL Xtreme 4</h2>
-<div class="price" id="pprice">R$ 60,90</div>
-<div class="sub">Entrega em até 7 dias · frete mostrado antes da confirmação</div>
-<div class="sw" role="radiogroup" aria-label="Cor"><button type="button" class="swb on" data-c="Preta" role="radio" aria-checked="true"><i style="background:#111"></i>Preta</button><button type="button" class="swb" data-c="Branca" role="radio" aria-checked="false"><i style="background:#fff"></i>Branca</button></div>
-<a class="btn b1" href="#checkout">🛒 COMPRAR AGORA</a>
-
-
-</div></div></div></section>
-
-<section class="alt" id="info"><div class="wrap"><h2>Compra com transparência</h2>
-<div class="grid3">
-<div class="box"><h3>🚚 Entrega</h3><p>Prazo de entrega: 7 dias. O valor do frete é informado antes do pagamento. Você recebe o código de rastreio quando houver envio.</p></div>
-<div class="box"><h3>🔁 Trocas e devoluções</h3><p>Você tem direito de arrependimento em até 7 dias após o recebimento, conforme o Código de Defesa do Consumidor.</p></div>
-<div class="box"><h3>💬 Atendimento</h3><p>Dúvidas sobre o pedido? Entraremos em contato pelo e-mail informado na compra.</p></div>
-</div></div></section>
-
-<section id="avaliacoes"><div class="wrap"><h2>⭐ O que nossos clientes dizem</h2>
-<div id="revs"><div class="rev"><div class="who"><img class="av" src="ae44399135aaeb7521c2e5e3928a1960.jpg" alt="Foto de Lucas Martins" onerror="this.remove()"><strong>Lucas Martins</strong></div><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><p>“Minha JBL chegou certinho, bem embalada e funcionando perfeitamente. Gostei muito da compra!”</p></div>
-<div class="rev"><div class="who"><img class="av" src="593dd3b122b9e786c26c6e2a91cd667b.jpg" alt="Foto de Mariana Costa" onerror="this.remove()"><strong>Mariana Costa</strong></div><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><p>“Demorou um pouquinho mais do que eu esperava, mas chegou tudo certo. A caixa de som é muito boa!”</p></div>
-<div class="rev"><div class="who"><img class="av" src="2257e7c03d9862dc9ee43e6d680c2735.jpg" alt="Foto de Gabriel Oliveira" onerror="this.remove()"><strong>Gabriel Oliveira</strong></div><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><p>“Recebi minha JBL dentro do prazo, lacrada e em ótimo estado. Compra tranquila!”</p></div>
-<div class="rev"><div class="who"><img class="av" src="e7906e7026aaa9b6f981cd7da5fc3ca3.jpg" alt="Foto de Ana Beatriz Souza" onerror="this.remove()"><strong>Ana Beatriz Souza</strong></div><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><p>“Achei que ia demorar mais, mas o pedido chegou direitinho. Gostei bastante da qualidade do produto!”</p></div>
-<div class="rev"><div class="who"><img class="av" src="fa007a26b8db079606eee43983b46058.jpg" alt="Foto de Lucas Carvalho" onerror="this.remove()"><strong>Lucas Carvalho</strong></div><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><p>Chegou certinho antes do prazo.</p><img class="rvimg" src="file_000000005994820e9af9caabd9e7375f.png" alt="" onerror="this.remove()"></div>
+<div class="hero">
+  <div class="wrap">
+    <h1>Bem-vindo à Importados<span>JBL</span></h1>
+    <p>Produtos JBL com compra simples, preço transparente e atendimento claro.</p>
+  </div>
 </div>
-</div></section>
 
+<section id="produto">
+  <div class="wrap">
+    <div class="prod">
+      <div class="photo">
+        <div class="phtxt"><big>🔊</big>Foto do produto</div>
+        <img id="mainimg"
+          src="913c66b8e7c1f30255dd0caae10a8191.jpg"
+          alt="Caixa de som JBL"
+          onload="this.parentNode.classList.add('has');this.style.display=''"
+          onerror="this.style.display='none'">
+      </div>
+
+      <div>
+        <span class="badge">OFERTA ESPECIAL</span>
+        <h2 style="margin-top:12px">Caixa de Som JBL</h2>
+        <p class="sub">Confira as informações do produto antes de comprar.</p>
+        <div class="price">R$ 60,97</div>
+        <div class="sub">Preço do produto. O frete será calculado no checkout.</div>
+
+        <div class="sw">
+          <button class="swb on" type="button" data-color="Preto" onclick="selectColor(this)">
+            <i style="background:#111"></i>Preto
+          </button>
+          <button class="swb" type="button" data-color="Azul" onclick="selectColor(this)">
+            <i style="background:#2563eb"></i>Azul
+          </button>
+        </div>
+
+        <button class="btn b1" type="button" onclick="goCheckout()">
+          COMPRAR AGORA
+        </button>
+        <a class="btn b2" href="#info">Informações da compra</a>
+        <p class="safe">Confira o produto, o valor total e as condições antes de concluir o pedido.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>Por que comprar na ImportadosJBL?</h2>
+    <div class="grid3">
+      <div class="box">
+        <h3>🔊 Produtos</h3>
+        <p>Consulte as informações e características do produto antes da compra.</p>
+      </div>
+      <div class="box">
+        <h3>💳 Pagamento Pix</h3>
+        <p>O pagamento será apresentado no checkout conforme a resposta da plataforma de pagamento.</p>
+      </div>
+      <div class="box">
+        <h3>📦 Informações claras</h3>
+        <p>Confira o frete e os dados de entrega antes de finalizar o pedido.</p>
+      </div>
+    </div>
+  </div>
+</section><section id="avaliacoes">
+  <div class="wrap">
+    <h2>Avaliações de clientes</h2>
+    <p class="safe">Publique avaliações reais de clientes, com autorização.</p>
+
+    <div id="revs">
+      <div class="rev">
+        <div class="who">
+          <div>
+            <strong>Avaliações dos clientes</strong>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <p>As avaliações aparecerão aqui quando forem adicionadas à loja.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="info">
+  <div class="wrap">
+    <h2>Informações da compra</h2>
+    <div class="grid3">
+      <div class="box">
+        <h3>📦 Entrega</h3>
+        <p>Informe seu endereço no checkout para calcular o valor do frete.</p>
+      </div>
+      <div class="box">
+        <h3>💳 Pagamento</h3>
+        <p>O pagamento Pix depende da resposta da integração com a NovaPay.</p>
+      </div>
+      <div class="box">
+        <h3>🔄 Trocas e suporte</h3>
+        <p>Antes de comprar, confira as condições de troca, devolução e atendimento da loja.</p>
+      </div>
+    </div>
+  </div>
+</section>
 </div>
-<div id="checkoutView"><div class="wrap">
-<div class="chdr"><div class="logo">Importados<b>JBL</b></div><div style="display:flex;gap:12px;align-items:center"><button type="button" id="tostore" class="lnk">← Voltar à loja</button></div></div>
-<div class="steps"><div class="st on" id="s1">1. Dados de entrega</div><div class="st" id="s2">2. Pagamento</div><div class="st" id="s3">3. Confirmação</div></div>
-<div class="grid"><main>
-<section class="card" id="p1"><h2><i>●</i> Dados de entrega</h2>
-<form id="f" novalidate>
-<label>Nome completo<input name="nome" autocomplete="name"></label>
-<label>E-mail<input name="email" type="email" autocomplete="email"></label>
-<div class="r2"><label>CEP<input name="cep" inputmode="numeric" maxlength="9" autocomplete="postal-code"></label>
-<label>Bairro<input name="bairro"></label></div>
-<div class="r3"><label>Número<input name="num"></label><label>Endereço (rua)<input name="end" autocomplete="address-line1"></label><label>Complemento<input name="comp"></label></div>
-<div class="r2"><label>Cidade<input name="cid"></label><label>Estado (UF)<input name="uf" maxlength="2"></label></div>
-<div class="msg" id="e1" role="alert"></div>
-<button class="btn" type="submit">Continuar para o Pix</button></form></section>
 
-<section class="card hid" id="p2"><h2><i>●</i> Pagamento</h2>
+<div id="checkoutView">
+  <header>
+    <div class="wrap">
+      <div class="logo">Importados<b>JBL</b></div>
+      <button type="button" class="swb" onclick="backStore()">← Voltar à loja</button>
+    </div>
+  </header>
 
-<div class="msg" id="e2" role="alert"></div>
-<button class="btn" id="gen" type="button">Gerar QR Code Pix</button>
-<div class="hid" id="qrbox"><div class="qr"><img id="qr" alt="QR Code Pix"></div>
-<textarea id="code" readonly aria-label="Pix Copia e Cola"></textarea>
-<button class="btn o" id="cp" type="button">Copiar código Pix</button>
-<div class="stat"><span class="dot"></span><span id="st">Aguardando pagamento…</span></div>
-<ol><li>Abra o app do seu banco e escolha Pix.</li><li>Pague lendo o QR Code ou usando “Pix Copia e Cola”.</li><li>Confira o valor e confirme. Esta tela atualiza sozinha quando o pagamento for confirmado.</li></ol></div>
-<button class="btn o hid" id="back" type="button" style="margin-top:12px">← Editar dados de entrega</button></section>
+  <section>
+    <div class="wrap" style="max-width:650px">
+      <h2>Finalizar pedido</h2>
+      <p class="safe">Preencha seus dados para gerar a cobrança Pix.</p>
 
-<section class="card hid" id="p3"><div class="ok"><div class="c">✔</div><h2>Pagamento confirmado!</h2>
-<p>Pedido <strong id="oid"></strong> recebido. Entraremos em contato pelo e-mail informado com os detalhes do envio.</p></div></section>
-</main>
-<aside class="card sum"><h2>Resumo do pedido</h2>
-<div class="pr"><img id="pimg" src="913c66b8e7c1f30255dd0caae10a8191.jpg" alt="Caixa de Som JBL Xtreme 4"><div><strong>Caixa de Som JBL Xtreme 4</strong><br><span style="color:var(--mut);font-size:.85rem">Cor: <b id="vcor">Preta</b> · Quantidade: 1</span></div></div>
-<div class="line"><span>Produto</span><span id="vp"></span></div>
-<div class="line"><span>Frete</span><span id="vf"></span></div>
-<div class="line" id="vx"><span>Taxa de serviço (5% do frete)</span><span id="vk"></span></div>
-<div class="line" id="vz"><span>Prazo estimado</span><span id="vd"></span></div>
-<div class="line tot"><span>Total</span><span id="vt"></span></div></aside></div>
-<div class="cft"><a href="/termos">Termos de Uso</a> · <a href="/privacidade">Política de Privacidade</a><br>© ImportadosJBL</div>
-</div></div>
+      <div class="box" style="margin-bottom:18px">
+        <strong>Caixa de Som JBL</strong>
+        <div>Produto: <b>R$ 60,97</b></div>
+        <div>Cor escolhida: <b id="colorSummary">Preto</b></div>
+      </div>
 
-<footer><div class="wrap"><b>ImportadosJBL</b> — loja de produtos JBL.<br>
-<span id="contact">CNPJ: 47.826.391/0001-60</span><br>
-<small>JBL é marca de seus respectivos titulares. Esta loja não altera nem reivindica a marca.</small></div></footer>
+      <form id="checkoutForm">
+        <label>Nome completo
+          <input name="name" autocomplete="name" required placeholder="Seu nome">
+        </label>
+
+        <label>CPF
+          <input name="cpf" inputmode="numeric" autocomplete="off" required
+            maxlength="14" placeholder="000.000.000-00">
+        </label>
+
+        <label>Telefone
+          <input name="phone" type="tel" autocomplete="tel" required
+            placeholder="(00) 00000-0000">
+        </label>
+
+        <label>CEP
+          <input name="cep" inputmode="numeric" autocomplete="postal-code"
+            required maxlength="9" placeholder="00000-000">
+        </label>
+
+        <label>Endereço e número
+          <input name="address" autocomplete="street-address" required
+            placeholder="Rua, número e complemento">
+        </label>
+
+        <div class="row">
+          <label>Cidade
+            <input name="city" autocomplete="address-level2" required>
+          </label>
+          <label>Estado
+            <input name="state" autocomplete="address-level1" required
+              maxlength="2" placeholder="PR">
+          </label>
+        </div>
+
+        <label>Observação para entrega (opcional)
+          <textarea name="notes" rows="2" placeholder="Complemento ou referência"></textarea>
+        </label>
+
+        <div class="box">
+          <div>Produto: <b>R$ 60,97</b></div>
+          <div>Frete: <b id="freight">R$ 0,00</b></div>
+          <div>Taxa de serviço: <b id="serviceFee">R$ 0,00</b></div>
+          <hr>
+          <div>Total: <strong id="total">R$ 60,97</strong></div>
+        </div>
+
+        <div id="errorMsg" class="msg" role="alert"></div>
+
+        <button id="payButton" class="btn b1" type="submit">
+          GERAR PAGAMENTO PIX
+        </button>
+        <p class="safe">Confira os dados e o valor antes de pagar. O pedido só estará pago após confirmação da plataforma.</p>
+      </form>
+
+      <div id="pixPanel" class="box" style="display:none;margin-top:18px">
+        <h2>Pagamento Pix</h2>
+        <p id="pixStatus">Aguardando os dados do pagamento…</p>
+        <div id="qrArea" style="text-align:center;margin:16px 0"></div>
+        <label>Pix copia e cola
+          <textarea id="pixCode" rows="4" readonly></textarea>
+        </label>
+        <button type="button" class="btn b1" onclick="copyPix()">COPIAR CÓDIGO PIX</button>
+      </div>
+    </div>
+  </section>
+</div><footer>
+  <div class="wrap">
+    <div class="logo">Importados<b>JBL</b></div>
+    <p>Confira as informações do produto e as condições de compra antes de finalizar o pedido.</p>
+    <p>O pagamento depende da confirmação da plataforma de pagamentos.</p>
+    <p>© <span id="year"></span> ImportadosJBL. Todos os direitos reservados.</p>
+  </div>
+</footer>
 
 <script>
-var $=function(s){return document.querySelector(s)},brl=function(v){return"R$ "+v.toFixed(2).replace(".",",")};
-var cfg={preco:60.9,frete:null,prazo:"7 dias"},oid=null,tm=null;
-document.getElementById("pimg").onerror=function(){var d=document.createElement("div");d.className="ph";d.textContent="🔊";this.replaceWith(d)};
-function render(){var fr=typeof cfg.frete==="number";$("#vp").textContent=brl(cfg.preco);
- $("#vf").textContent=fr?(cfg.frete===0?"Grátis":brl(cfg.frete)):"a confirmar";
- $("#vz").style.display=cfg.prazo?"flex":"none";$("#vd").textContent=cfg.prazo||"";
- var tx=fr?Math.round(cfg.frete*5)/100:0;$("#vx").style.display=tx>0?"flex":"none";$("#vk").textContent=brl(tx);$("#vt").textContent=brl(cfg.preco+(fr?cfg.frete:0)+tx)+(fr?"":" + frete")}
-render();
-fetch("/api/config").then(function(r){return r.json()}).then(function(c){cfg=c;render()}).catch(function(){});
-function go(n){["p1","p2","p3"].forEach(function(id,i){$("#"+id).classList.toggle("hid",i!==n-1)});
- [1,2,3].forEach(function(i){var e=$("#s"+i);e.className="st"+(i===n?" on":i<n?" done":"")})}
-function show(id,t){var e=$(id);e.textContent=t;e.classList.add("show")}
-$("#f").onsubmit=function(e){e.preventDefault();var f=e.target.elements,bad=[],er=$("#e1");er.classList.remove("show");
- ["nome","email","cep","end","num","bairro","cid","uf"].forEach(function(k){f[k].removeAttribute("aria-invalid");if(!f[k].value.trim())bad.push(k)});
- if(!bad.length){if(f.nome.value.trim().split(/\s+/).length<2)bad.push("nome");
-  
-  if(!/^\S+@\S+\.\S+$/.test(f.email.value))bad.push("email");
-  if(f.cep.value.replace(/\D/g,"").length!==8)bad.push("cep");
-  if(!/^[A-Za-z]{2}$/.test(f.uf.value.trim()))bad.push("uf")}
- if(bad.length){bad.forEach(function(k){f[k].setAttribute("aria-invalid","true")});show("#e1","Revise os campos destacados (nome completo, e-mail, CEP de 8 dígitos e UF).");f[bad[0]].focus();return}
- go(2);window.scrollTo(0,0)};
-$("#back").onclick=function(){clearInterval(tm);go(1)};
-$("#gen").onclick=function(){var b=this,f=$("#f").elements,d={};$("#e2").classList.remove("show");b.disabled=true;b.textContent="Gerando Pix…";
- ["nome","email","cep","end","num","comp","bairro","cid","uf"].forEach(function(k){d[k]=f[k].value.trim()});d.cor=$("#vcor").textContent;
- fetch("/api/pix",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(d)})
- .then(function(r){return r.json().then(function(j){if(!r.ok)throw new Error(j.erro||"Erro");return j})})
- .then(function(j){oid=j.orderId;$("#qr").src="data:image/png;base64,"+j.qrBase64;$("#code").value=j.copiaECola;
-  $("#vt").textContent=brl(j.total);$("#qrbox").classList.remove("hid");$("#back").classList.remove("hid");b.classList.add("hid");poll()})
- .catch(function(err){b.disabled=false;b.textContent="Gerar QR Code Pix";show("#e2","Não foi possível gerar o Pix agora. "+(err.message==="Failed to fetch"?"O servidor de pagamento não está conectado.":err.message))})};
-$("#cp").onclick=function(){var c=$("#code");c.select();var b=this,ok=function(){b.textContent="Código copiado ✔";setTimeout(function(){b.textContent="Copiar código Pix"},2000)};
- if(navigator.clipboard)navigator.clipboard.writeText(c.value).then(ok,function(){document.execCommand("copy");ok()});else{document.execCommand("copy");ok()}};
-function poll(){clearInterval(tm);tm=setInterval(function(){fetch("/api/status/"+oid).then(function(r){return r.json()}).then(function(j){
- if(j.status==="approved"){clearInterval(tm);$("#oid").textContent="#"+oid.slice(0,8).toUpperCase();go(3);window.scrollTo(0,0)}
- else if(j.status==="expired"||j.status==="cancelled"){clearInterval(tm);$("#st").textContent="Pix expirado. Volte e gere um novo código."}}).catch(function(){})},4000)}
-$("#tostore").onclick=function(){clearInterval(tm);document.body.classList.remove("co-on");window.scrollTo(0,0)};
-(function(){
- var sb=document.querySelectorAll(".swb");
- sb.forEach(function(x){x.onclick=function(){sb.forEach(function(y){y.classList.remove("on");y.setAttribute("aria-checked","false")});x.classList.add("on");x.setAttribute("aria-checked","true");$("#vcor").textContent=x.dataset.c;var u={Preta:"913c66b8e7c1f30255dd0caae10a8191.jpg",Branca:"file_00000000a93c820eaaef73e276858d10.png"}[x.dataset.c];var mi=document.getElementById("mainimg"),pi=document.getElementById("pimg");mi.parentNode.classList.remove("has");mi.style.display="";mi.src=u;if(pi)pi.src=u}});
- 
- 
- document.querySelectorAll('a[href="#checkout"]').forEach(function(a){a.onclick=function(e){e.preventDefault();go(1);document.body.classList.add("co-on");window.scrollTo(0,0)}});
-})();
+const PRODUCT_PRICE = 60.97;
+const FREIGHT = 7.00;
+const SERVICE_RATE = 0.05;
+
+let selectedColor = "Preto";
+let currentChargeId = null;
+let pollTimer = null;
+
+const money = value =>
+  Number(value).toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL"
+  });
+
+function selectColor(button) {
+  document.querySelectorAll(".swb[data-color]").forEach(item => {
+    item.classList.remove("on");
+  });
+
+  button.classList.add("on");
+  selectedColor = button.dataset.color || "Preto";
+
+  const summary = document.getElementById("colorSummary");
+  if (summary) summary.textContent = selectedColor;
+}
+
+function goCheckout() {
+  document.body.classList.add("co-on");
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  updateTotal();
+}
+
+function backStore() {
+  document.body.classList.remove("co-on");
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function updateTotal() {
+  const fee = FREIGHT * SERVICE_RATE;
+  const total = PRODUCT_PRICE + FREIGHT + fee;
+
+  document.getElementById("freight").textContent = money(FREIGHT);
+  document.getElementById("serviceFee").textContent = money(fee);
+  document.getElementById("total").textContent = money(total);
+
+  return total;
+}
+
+function showError(message) {
+  const box = document.getElementById("errorMsg");
+  box.textContent = message;
+  box.classList.add("show");
+}
+
+function clearError() {
+  const box = document.getElementById("errorMsg");
+  box.textContent = "";
+  box.classList.remove("show");
+}
+
+async function readResponse(response) {
+  const raw = await response.text();
+
+  try {
+    return JSON.parse(raw);
+  } catch {
+    throw new Error(
+      "A API não retornou JSON válido. Confira se a rota /api/charge existe e se o deploy terminou. Resposta: " +
+      raw.slice(0, 180)
+    );
+  }
+}
+
+function findValue(obj, keys) {
+  if (!obj || typeof obj !== "object") return null;
+
+  for (const key of keys) {
+    if (obj[key] !== undefined && obj[key] !== null && obj[key] !== "") {
+      return obj[key];
+    }
+  }
+
+  return null;
+}
+
+function findNestedValue(data, keys) {
+  const candidates = [
+    data,
+    data && data.data,
+    data && data.charge,
+    data && data.payment,
+    data && data.pix
+  ];
+
+  for (const candidate of candidates) {
+    const value = findValue(candidate, keys);
+    if (value !== null) return value;
+  }
+
+  return null;
+}
+
+function showPix(qr, code) {
+  const panel = document.getElementById("pixPanel");
+  const qrArea = document.getElementById("qrArea");
+  const pixCode = document.getElementById("pixCode");
+
+  panel.style.display = "block";
+  qrArea.replaceChildren();
+  pixCode.value = code || "";
+
+  if (qr) {
+    const qrText = String(qr);
+
+    if (/^https?:\/\//i.test(qrText)) {
+      const image = document.createElement("img");
+      image.src = qrText;
+      image.alt = "QR Code Pix";
+      image.style.maxWidth = "260px";
+      image.style.width = "100%";
+      image.style.height = "auto";
+      qrArea.appendChild(image);
+    } else {
+      const image = document.createElement("img");
+      image.alt = "QR Code Pix";
+      image.style.maxWidth = "260px";
+      image.style.width = "100%";
+      image.style.height = "auto";
+
+      image.src = qrText.startsWith("data:image/")
+        ? qrText
+        : "data:image/png;base64," + qrText;
+
+      image.onerror = () => {
+        qrArea.textContent =
+          "Não foi possível mostrar o QR Code recebido. Use o código Pix, se disponível.";
+      };
+
+      qrArea.appendChild(image);
+    }
+  } else {
+    qrArea.textContent =
+      "O QR Code não veio na resposta da API. Confira o código Pix abaixo.";
+  }
+
+  document.getElementById("pixStatus").textContent =
+    "Confira os dados e conclua o pagamento no seu aplicativo bancário.";
+}
+
+async function copyPix() {
+  const code = document.getElementById("pixCode").value;
+
+  if (!code) {
+    alert("O código Pix ainda não está disponível.");
+    return;
+  }
+
+  try {
+    await navigator.clipboard.writeText(code);
+    alert("Código Pix copiado!");
+  } catch {
+    const field = document.getElementById("pixCode");
+    field.focus();
+    field.select();
+    alert("Selecione e copie o código Pix.");
+  }
+}
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+updateTotal();
+</script><script>
+document.getElementById("checkoutForm").addEventListener("submit", async function(event) {
+  event.preventDefault();
+  clearError();
+
+  const button = document.getElementById("payButton");
+  button.disabled = true;
+  button.textContent = "GERANDO PIX...";
+
+  try {
+    const form = new FormData(this);
+
+    const customer = {
+      name: form.get("name"),
+      cpf: form.get("cpf"),
+      phone: form.get("phone"),
+      cep: form.get("cep"),
+      address: form.get("address"),
+      city: form.get("city"),
+      state: form.get("state"),
+      notes: form.get("notes")
+    };
+
+    const total = updateTotal();
+
+    const response = await fetch("/api/charge", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        amount: Number(total.toFixed(2)),
+        description: "Pedido ImportadosJBL",
+        color: selectedColor,
+        customer: customer
+      })
+    });
+
+    const data = await readResponse(response);
+
+    if (!response.ok) {
+      throw new Error(
+        data.error ||
+        data.message ||
+        "Não foi possível gerar o Pix. Verifique a configuração da API."
+      );
+    }
+
+    const qr = findNestedValue(data, [
+      "qrBase64",
+      "qr_base64",
+      "qrcode_base64",
+      "qrCodeBase64",
+      "qrCode",
+      "qr_code",
+      "qr_code_url",
+      "qrCodeUrl",
+      "image",
+      "image_base64"
+    ]);
+
+    const pixCode = findNestedValue(data, [
+      "copiaECola",
+      "copiaecola",
+      "copyPaste",
+      "copy_paste",
+      "pixCopiaECola",
+      "pix_copy_paste",
+      "brcode",
+      "brCode",
+      "payload",
+      "emv",
+      "pix_code"
+    ]);
+
+    currentChargeId = findNestedValue(data, [
+      "orderId",
+      "chargeId",
+      "charge_id",
+      "id",
+      "transactionId",
+      "transaction_id"
+    ]);
+
+    if (!qr && !pixCode) {
+      throw new Error(
+        "A NovaPay respondeu, mas não encontrei o QR Code nem o código Pix. É necessário adaptar o código ao formato real da resposta da API."
+      );
+    }
+
+    showPix(qr, pixCode);
+
+    document.getElementById("pixPanel").scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+
+    if (currentChargeId) {
+      document.getElementById("pixStatus").textContent =
+        "Cobrança criada. Confira o Pix e aguarde a confirmação do pagamento.";
+    }
+
+  } catch (error) {
+    showError(error.message || "Ocorreu um erro ao gerar o Pix.");
+  } finally {
+    button.disabled = false;
+    button.textContent = "GERAR PAGAMENTO PIX";
+  }
+});
 </script>
 </body>
 </html>
