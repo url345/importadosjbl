@@ -6,26 +6,24 @@
 <title>ImportadosJBL — Produtos JBL com os melhores preços</title>
 <meta name="description" content="Loja ImportadosJBL: produtos JBL com preço transparente e atendimento claro.">
 <style>
-:root{--bg:#fff;--bg2:#f4f4f4;--tx:#111;--mut:#555;--bd:#ddd;--or:#ff6a00;--or2:#e05a00;--card:#fff;--hdr:#0b0b0b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0b0b;--bg2:#161616;--tx:#f5f5f5;--mut:#b0b0b0;--bd:#2c2c2c;--card:#161616}}
-:root[data-theme="dark"]{--bg:#0b0b0b;--bg2:#161616;--tx:#f5f5f5;--mut:#b0b0b0;--bd:#2c2c2c;--card:#161616}
+:root{--bg:#fff;--bg2:#f4f4f4;--tx:#111;--mut:#555;--bd:#ddd;--or:#ff6a00;--or2:#e05a00;--card:#fff;--hdr:#fff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.55}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--hdr);z-index:10}
 .wrap{max-width:1080px;margin:0 auto;padding:0 18px}
-header{background:var(--hdr);color:#fff;position:sticky;top:env(safe-area-inset-top,0px);z-index:9}
+header{background:var(--hdr);color:var(--tx);border-bottom:1px solid var(--bd);position:sticky;top:env(safe-area-inset-top,0px);z-index:9}
 header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
 .logo{font-weight:900;font-size:1.25rem;letter-spacing:.5px}.logo b{color:var(--or)}
-nav a{color:#fff;text-decoration:none;margin-left:16px;font-size:.92rem;opacity:.85}nav a:hover{opacity:1;color:var(--or)}
-.hero{background:linear-gradient(135deg,#000 55%,#2a1200);color:#fff;padding:44px 0}
+nav a{color:var(--tx);text-decoration:none;margin-left:16px;font-size:.92rem;opacity:.85}nav a:hover{opacity:1;color:var(--or)}
+.hero{background:linear-gradient(135deg,#fff 35%,#ffe9d6);color:#111;padding:44px 0;border-bottom:1px solid var(--bd)}
 .hero h1{margin:0 0 8px;font-size:clamp(1.8rem,5vw,3rem);line-height:1.1}.hero h1 span{color:var(--or)}
-.hero p{margin:0;max-width:540px;color:#ddd}
+.hero p{margin:0;max-width:540px;color:var(--mut)}
 section{padding:36px 0}
 h2{font-size:1.5rem;margin:0 0 18px}
 .prod{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
 .photo{aspect-ratio:1;background:var(--bg2);border:2px dashed var(--bd);border-radius:16px;display:grid;place-items:center;text-align:center;color:var(--mut);padding:20px;font-size:.9rem;position:relative;overflow:hidden}
-.photo big{display:block;font-size:3rem}.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;border-radius:14px}.photo.has{border:0;background:#111}.photo.has .phtxt{display:none}
-.badge{display:inline-block;background:#000;color:var(--or);font-weight:800;font-size:.75rem;padding:3px 10px;border-radius:99px;border:1px solid var(--or)}
+.photo big{display:block;font-size:3rem}.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;border-radius:14px}.photo.has{border:1px solid var(--bd);background:#fff}.photo.has .phtxt{display:none}
+.badge{display:inline-block;background:#fff4eb;color:var(--or2);font-weight:800;font-size:.75rem;padding:3px 10px;border-radius:99px;border:1px solid var(--or)}
 .price{font-size:clamp(2.4rem,7vw,3.4rem);font-weight:900;color:var(--or);line-height:1;margin:10px 0 4px}
 .sub{color:var(--mut);font-size:.88rem;margin-bottom:16px}
 .btn{display:block;width:100%;text-align:center;border:0;border-radius:12px;padding:16px;font-size:1.1rem;font-weight:800;cursor:pointer;text-decoration:none;font-family:inherit;margin-top:10px}
@@ -43,22 +41,23 @@ input:focus,textarea:focus{outline:2px solid var(--or);border-color:var(--or)}
 .msg{display:none;border-radius:10px;padding:12px;font-size:.92rem;background:#fff1e6;color:#5a2600;border:1px solid var(--or)}
 .msg.show{display:block}
 .safe{font-size:.82rem;color:var(--mut)}
-footer{background:var(--hdr);color:#bbb;padding:26px 0;font-size:.88rem}footer b{color:var(--or)}footer p{margin:6px 0 0}
+footer{background:var(--bg2);color:var(--mut);border-top:1px solid var(--bd);padding:26px 0;font-size:.88rem}footer b{color:var(--or)}footer p{margin:6px 0 0}
 .sw{display:flex;gap:10px;margin:0 0 6px;flex-wrap:wrap}.swb{display:flex;align-items:center;gap:8px;padding:10px 14px;border:2px solid var(--bd);border-radius:10px;background:var(--card);color:var(--tx);font:inherit;font-weight:600;cursor:pointer}.swb i{width:18px;height:18px;border-radius:50%;border:1px solid #888}.swb.on{border-color:var(--or)}
 .rev{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px;max-width:520px}.rev strong{display:block}#revs{display:grid;gap:12px}.rev .av{width:36px;height:36px;border-radius:50%;object-fit:cover;flex:none}.who{display:flex;align-items:center;gap:10px}.rev .rvimg{display:block;width:100%;max-width:240px;border-radius:10px;margin-top:10px}.rev .stars{font-size:1.05rem;letter-spacing:2px;margin-top:2px}.rev p{margin:6px 0 0}
-#checkoutView{display:none;--bg:#0b0b0b;--bg2:#161616;--tx:#fff;--mut:#a8a8a8;--bd:#2a2a2a;--card:#151515;background:#0b0b0b;color:#fff;min-height:100vh}
+#checkoutView{display:none;background:var(--bg);color:var(--tx);min-height:100vh}
 body.co-on #checkoutView{display:block}body.co-on #store{display:none}
 .steps{display:flex;gap:6px;margin:0 0 20px}.st{flex:1;text-align:center;font-size:.78rem;color:var(--mut);border-top:4px solid var(--bd);padding-top:6px}.st.on{color:var(--tx);border-color:var(--or);font-weight:700}.st.done{border-color:#22c55e;color:#22c55e}
-#checkoutView .msg{background:#2a1010;color:#ffb3b3;border-color:#ff5c5c}
+#checkoutView .msg{background:#fff0f0;color:#9b1c1c;border-color:#ff5c5c}
 .fs{border:1px solid var(--bd);border-radius:14px;padding:16px;margin:0;display:grid;gap:12px;background:var(--card);min-width:0}
 .fs legend{padding:0 8px;font-weight:800;font-size:.95rem}.fs legend i{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--or);color:#000;font-style:normal;font-size:.8rem;margin-right:8px}
 #checkoutView form{gap:14px}#checkoutView .box h2{font-size:1.3rem}
-.prodcard{display:flex;gap:14px;align-items:center;margin:0 0 16px}.prodcard img{width:84px;height:84px;object-fit:contain;background:#111;border-radius:12px;flex:none}
+.prodcard{display:flex;gap:14px;align-items:center;margin:0 0 16px}.prodcard img{width:84px;height:84px;object-fit:contain;background:#fff;border:1px solid var(--bd);border-radius:12px;flex:none}
 .sumbox .ln{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--bd);font-size:.95rem}.sumbox .tot{border:0;font-size:1.25rem;color:var(--or);font-weight:900}
 #checkoutView input:invalid:not(:placeholder-shown){border-color:#ff5c5c}
 #checkoutView.pix-on #coStep1{display:none}#pixPanel{text-align:center;padding:20px}
 .copyrow{display:flex;gap:8px;align-items:stretch}.copyrow textarea{flex:1;min-width:0;height:46px;resize:none;white-space:nowrap;overflow:hidden;font:.8rem ui-monospace,Menlo,monospace;padding:13px 12px}.copyrow .btn{width:auto;margin:0;padding:0 18px;font-size:.9rem}
-#toast{position:fixed;inset:0;display:none;place-items:center;background:rgba(0,0,0,.55);z-index:100;padding:20px}#toast.show{display:grid}#toast .tc{background:#151515;color:#fff;border:1px solid #2a2a2a;border-radius:20px;padding:26px 22px;max-width:340px;width:100%;text-align:center;animation:pop .25s ease}#toast .ic{width:72px;height:72px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;background:rgba(34,197,94,.15);border:2px solid #22c55e;color:#22c55e;font-size:2.2rem;font-weight:900}#toast.er .ic{background:rgba(255,92,92,.15);border-color:#ff5c5c;color:#ff5c5c}#toast h3{margin:0 0 6px;font-size:1.15rem}#toast p{margin:0;color:#a8a8a8;font-size:.92rem}@keyframes pop{from{transform:scale(.85);opacity:0}to{transform:scale(1);opacity:1}}
+#toast{position:fixed;inset:0;display:none;place-items:center;background:rgba(0,0,0,.4);z-index:100;padding:20px}#toast.show{display:grid}#toast .tc{background:#fff;color:#111;border:1px solid #ddd;box-shadow:0 12px 40px rgba(0,0,0,.25);border-radius:20px;padding:26px 22px;max-width:340px;width:100%;text-align:center;animation:pop .25s ease}#toast .ic{width:72px;height:72px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;background:rgba(34,197,94,.15);border:2px solid #22c55e;color:#22c55e;font-size:2.2rem;font-weight:900}#toast.er .ic{background:rgba(255,92,92,.15);border-color:#ff5c5c;color:#ff5c5c}#toast h3{margin:0 0 6px;font-size:1.15rem}#toast p{margin:0;color:#555;font-size:.92rem}@keyframes pop{from{transform:scale(.85);opacity:0}to{transform:scale(1);opacity:1}}
+#freight.calc{color:var(--mut);font-weight:600}#freight.calc::before{content:"";display:inline-block;width:12px;height:12px;border:2px solid var(--bd);border-top-color:var(--or);border-radius:50%;margin-right:6px;animation:rot .7s linear infinite;vertical-align:-2px}#freight.calc.idle::before{display:none}@keyframes rot{to{transform:rotate(360deg)}}
 @media(max-width:760px){.prod,.grid3{grid-template-columns:1fr}.row{grid-template-columns:1fr}nav a:not(.cta){display:none}}</style>
 </head>
 <body>
@@ -210,7 +209,7 @@ body.co-on #checkoutView{display:block}body.co-on #store{display:none}
           <div class="box sumbox">
             <div class="ln"><span>Produto</span><b>R$ 60,90</b></div>
             <div class="ln"><span>Frete</span><b id="freight">R$ 0,00</b></div>
-            <div class="ln"><span>Taxa de serviço</span><b id="serviceFee">R$ 0,00</b></div>
+            <div class="ln" style="display:none"><span>Taxa de serviço</span><b id="serviceFee">R$ 0,00</b></div>
             <div class="ln tot"><span>Total</span><strong id="total">R$ 60,90</strong></div>
           </div>
 
@@ -249,7 +248,7 @@ body.co-on #checkoutView{display:block}body.co-on #store{display:none}
 <script>
 const PRODUCT_PRICE = 60.90;
 const FREIGHT = 7.00;
-const SERVICE_RATE = 0.05;
+const SERVICE_RATE = 0;
 
 let selectedColor = "Preto";
 let currentChargeId = null;
@@ -563,6 +562,27 @@ document.getElementById("checkoutForm").addEventListener("submit", async functio
 /* Aviso bonito de código copiado (no lugar do alert do navegador) */
 (function(){var t,tm;window.toast=function(title,msg,ok){if(!t){t=document.createElement("div");t.id="toast";t.setAttribute("role","status");t.innerHTML='<div class="tc"><div class="ic"></div><h3></h3><p></p></div>';t.onclick=function(){t.classList.remove("show")};document.body.appendChild(t)}
 t.className="show"+(ok?"":" er");t.querySelector(".ic").textContent=ok?"✔":"!";t.querySelector("h3").textContent=title;t.querySelector("p").textContent=msg;clearTimeout(tm);tm=setTimeout(function(){t.classList.remove("show")},2400)}})();
+</script>
+<script>
+/* Só visual: mostra "Calculando frete…" ao completar o CEP. O valor do frete continua vindo do seu código (FREIGHT). */
+(function(){
+ var st="idle",tm,f=document.getElementById("checkoutForm"),cep=f.elements.cep,btn=document.getElementById("payButton"),
+ fr=document.getElementById("freight"),fe=document.getElementById("serviceFee"),tt=document.getElementById("total"),base=updateTotal;
+ function apply(){
+  fr.classList.toggle("calc",st!=="done");fr.classList.toggle("idle",st==="idle");
+  if(st==="idle"){fr.textContent="Informe o CEP";fe.textContent="—";tt.textContent="—"}
+  else if(st==="loading"){fr.textContent="Calculando frete…";fe.textContent="…";tt.textContent="…"}
+ }
+ updateTotal=function(){var t=base();apply();return t};
+ cep.addEventListener("input",function(){
+  clearTimeout(tm);
+  if(cep.value.replace(/\D/g,"").length===8){
+   st="loading";apply();btn.disabled=true;
+   tm=setTimeout(function(){st="done";updateTotal();btn.disabled=false},1200);
+  }else{st="idle";apply();btn.disabled=false}
+ });
+ apply();
+})();
 </script>
 </body>
 </html>
