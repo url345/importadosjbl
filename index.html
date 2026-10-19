@@ -15,9 +15,11 @@ header{background:var(--hdr);color:var(--tx);border-bottom:1px solid var(--bd);p
 header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
 .logo{font-weight:900;font-size:1.25rem;letter-spacing:.5px}.logo b{color:var(--or)}
 nav a{color:var(--tx);text-decoration:none;margin-left:16px;font-size:.92rem;opacity:.85}nav a:hover{opacity:1;color:var(--or)}
-.hero{background:linear-gradient(135deg,#fff 35%,#ffe9d6);color:#111;padding:44px 0;border-bottom:1px solid var(--bd)}
-.hero h1{margin:0 0 8px;font-size:clamp(1.8rem,5vw,3rem);line-height:1.1}.hero h1 span{color:var(--or)}
-.hero p{margin:0;max-width:540px;color:var(--mut)}
+.hero{background:linear-gradient(135deg,#000 45%,#2a1200);color:#fff;padding:clamp(72px,16vw,140px) 0;border-bottom:4px solid var(--or);text-align:center}
+.hero small{display:block;margin:0 0 14px;font-size:clamp(.9rem,2.6vw,1.2rem);font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--or)}
+.hero h1{margin:0 0 18px;font-size:clamp(2.6rem,11vw,6.2rem);line-height:1;font-weight:900;text-transform:uppercase;letter-spacing:-.02em}.hero h1 span{color:var(--or)}
+.hero p{margin:0 auto;max-width:620px;font-size:clamp(1rem,3vw,1.3rem);color:#e6e6e6}
+.hero .hbtn{display:inline-block;margin-top:28px;padding:14px 32px;border-radius:12px;background:var(--or);color:#000;font-weight:900;text-decoration:none;font-size:1.05rem}
 section{padding:36px 0}
 h2{font-size:1.5rem;margin:0 0 18px}
 .prod{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
@@ -35,8 +37,8 @@ h2{font-size:1.5rem;margin:0 0 18px}
 .stars{color:var(--or);font-size:1.4rem;letter-spacing:2px}
 form{display:grid;gap:12px}
 label{font-size:.88rem;font-weight:600;display:grid;gap:4px}
-input,textarea{font:inherit;padding:12px;border-radius:10px;border:1px solid var(--bd);background:var(--card);color:var(--tx);width:100%}
-input:focus,textarea:focus{outline:2px solid var(--or);border-color:var(--or)}
+input,textarea,select{font:inherit;padding:12px;border-radius:10px;border:1px solid var(--bd);background:var(--card);color:var(--tx);width:100%}
+input:focus,textarea:focus,select:focus{outline:2px solid var(--or);border-color:var(--or)}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .msg{display:none;border-radius:10px;padding:12px;font-size:.92rem;background:#fff1e6;color:#5a2600;border:1px solid var(--or)}
 .msg.show{display:block}
@@ -58,7 +60,36 @@ body.co-on #checkoutView{display:block}body.co-on #store{display:none}
 .copyrow{display:flex;gap:8px;align-items:stretch}.copyrow textarea{flex:1;min-width:0;height:46px;resize:none;white-space:nowrap;overflow:hidden;font:.8rem ui-monospace,Menlo,monospace;padding:13px 12px}.copyrow .btn{width:auto;margin:0;padding:0 18px;font-size:.9rem}
 #toast{position:fixed;inset:0;display:none;place-items:center;background:rgba(0,0,0,.4);z-index:100;padding:20px}#toast.show{display:grid}#toast .tc{background:#fff;color:#111;border:1px solid #ddd;box-shadow:0 12px 40px rgba(0,0,0,.25);border-radius:20px;padding:26px 22px;max-width:340px;width:100%;text-align:center;animation:pop .25s ease}#toast .ic{width:72px;height:72px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;background:rgba(34,197,94,.15);border:2px solid #22c55e;color:#22c55e;font-size:2.2rem;font-weight:900}#toast.er .ic{background:rgba(255,92,92,.15);border-color:#ff5c5c;color:#ff5c5c}#toast h3{margin:0 0 6px;font-size:1.15rem}#toast p{margin:0;color:#555;font-size:.92rem}@keyframes pop{from{transform:scale(.85);opacity:0}to{transform:scale(1);opacity:1}}
 #freight.calc{color:var(--mut);font-weight:600}#freight.calc::before{content:"";display:inline-block;width:12px;height:12px;border:2px solid var(--bd);border-top-color:var(--or);border-radius:50%;margin-right:6px;animation:rot .7s linear infinite;vertical-align:-2px}#freight.calc.idle::before{display:none}@keyframes rot{to{transform:rotate(360deg)}}
-@media(max-width:760px){.prod,.grid3{grid-template-columns:1fr}.row{grid-template-columns:1fr}nav a:not(.cta){display:none}}</style>
+@media(max-width:760px){.prod,.grid3{grid-template-columns:1fr}.row{grid-template-columns:1fr}nav a:not(.cta){display:none}}body.co-on{--hdr:#000;background:#0b0b0b}
+#checkoutView{--bg:#0b0b0b;--bg2:#141414;--card:#141414;--tx:#fff;--mut:#a3a3a3;--bd:#2b2b2b;--or:#ff6b00;--or2:#e65f00;--hdr:#000;color-scheme:dark}
+#checkoutView input,#checkoutView select,#checkoutView textarea{background:#0b0b0b}
+#checkoutView .msg{background:rgba(255,92,92,.12);color:#ff9a9a;border-color:#ff5c5c}
+#checkoutView .cohd .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.lock{font-size:.85rem;color:var(--mut)}
+.back{background:none;border:0;color:var(--mut);font:inherit;font-size:.9rem;cursor:pointer;padding:0;margin:0 0 14px}.back:hover{color:var(--or)}
+#checkoutView .steps{gap:0;margin:0 0 26px}
+#checkoutView .st{position:relative;display:flex;flex-direction:column;align-items:center;gap:6px;border:0;padding:0;font-size:.8rem;color:var(--mut);text-align:center}
+#checkoutView .st::before{content:"";position:absolute;top:15px;left:-50%;width:100%;height:2px;background:var(--bd)}
+#checkoutView .st:first-child::before{display:none}
+#checkoutView .st i{position:relative;z-index:1;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#1b1b1b;border:2px solid var(--bd);font-style:normal;font-weight:800;color:var(--mut)}
+#checkoutView .st.on,#checkoutView .st.done{color:var(--tx);font-weight:700}
+#checkoutView .st.on::before,#checkoutView .st.done::before{background:var(--or)}
+#checkoutView .st.on i{background:var(--or);border-color:var(--or);color:#000}
+#checkoutView .st.done i{background:#22c55e;border-color:#22c55e;color:#000;font-size:0}#checkoutView .st.done i::after{content:"✓";font-size:.95rem}
+.cogrid{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:start}
+.coside{position:sticky;top:76px}.coside .ln{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--bd);font-size:.95rem}.coside .tot{border:0}
+.coside .prodcard{margin:0 0 8px}
+.trust{list-style:none;margin:14px 0 0;padding:14px 0 0;border-top:1px solid var(--bd);display:grid;gap:8px;font-size:.85rem;color:var(--mut)}
+#checkoutView.paid #coStep1{display:none}
+#checkoutView .fs{background:var(--card)}
+#pixPanel{text-align:left;padding:20px}
+.pixwait{display:flex;align-items:center;gap:8px;justify-content:center;color:var(--or);font-weight:700;margin:6px 0}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--or);animation:pls 1.2s ease-in-out infinite}@keyframes pls{50%{opacity:.25}}
+.qrbox{display:grid;place-items:center;margin:14px auto;padding:14px;background:#fff;border-radius:16px;max-width:292px;color:#111;font-size:.85rem;text-align:center}
+.how{margin:16px 0 0;padding-left:20px;color:var(--mut);font-size:.88rem;display:grid;gap:4px}
+.okic{width:72px;height:72px;margin:0 auto 14px;border-radius:50%;display:grid;place-items:center;background:rgba(34,197,94,.15);border:2px solid #22c55e;color:#22c55e;font-size:2.2rem;font-weight:900}
+@media(max-width:860px){.cogrid{grid-template-columns:1fr}.coside{order:-1;position:static}}
+</style>
 </head>
 <body>
 <div id="store">
@@ -74,8 +105,10 @@ body.co-on #checkoutView{display:block}body.co-on #store{display:none}
 
 <div class="hero">
   <div class="wrap">
-    <h1>Bem-vindo à Importados<span>JBL</span></h1>
+    <small>Seja bem-vindo à</small>
+    <h1>Importados<span>JBL</span></h1>
     <p>Produtos JBL com compra simples, preço transparente e atendimento claro.</p>
+    <a class="hbtn" href="#produto">Ver produto</a>
   </div>
 </div>
 
@@ -94,7 +127,7 @@ body.co-on #checkoutView{display:block}body.co-on #store{display:none}
       <div>
         <span class="badge">OFERTA ESPECIAL</span>
         <h2 style="margin-top:12px">Caixa de Som JBL Xtreme 4</h2>
-        <div class="price">R$ 60,90</div>
+        <div class="price">R$ 69,90</div>
         <div class="sub">Entrega em até 7 dias · frete mostrado no checkout antes de pagar</div>
 
         <div class="sw">
@@ -137,101 +170,104 @@ body.co-on #checkoutView{display:block}body.co-on #store{display:none}
 </div>
 
 <div id="checkoutView">
-  <header>
+  <header class="cohd">
     <div class="wrap">
       <div class="logo">Importados<b>JBL</b></div>
-      <button type="button" class="swb" onclick="backStore()">← Voltar à loja</button>
+      <span class="lock">🔒 Compra segura</span>
     </div>
   </header>
 
   <section>
-    <div class="wrap" style="max-width:680px">
-      <div class="steps" aria-hidden="true"><span class="st on" id="st1">1. Dados de entrega</span><span class="st" id="st2">2. Pagamento</span><span class="st" id="st3">3. Confirmação</span></div>
+    <div class="wrap">
+      <button type="button" class="back" onclick="backStore()">← Voltar à loja</button>
+      <div class="steps" aria-hidden="true"><span class="st on" id="st1"><i>1</i>Dados de entrega</span><span class="st" id="st2"><i>2</i>Pagamento Pix</span><span class="st" id="st3"><i>3</i>Confirmação</span></div>
 
-      <div id="coStep1">
-        <h2 style="margin-bottom:6px">Finalizar pedido</h2>
-        <p class="safe" style="margin-top:0">Preencha seus dados para gerar a cobrança Pix.</p>
+      <div class="cogrid">
+        <div class="comain">
+          <div id="coStep1">
+            <h2 style="margin-bottom:4px">Finalizar pedido</h2>
+            <p class="safe" style="margin-top:0">Preencha seus dados para gerar a cobrança Pix.</p>
+            <form id="checkoutForm">
+              <fieldset class="fs">
+                <legend><i>1</i>Seus dados</legend>
+                <label>Nome completo
+                  <input name="name" autocomplete="name" required placeholder="Seu nome">
+                </label>
+                <div class="row">
+                  <label>CPF
+                    <input name="cpf" inputmode="numeric" autocomplete="off" required maxlength="14" minlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="CPF com 11 números" placeholder="000.000.000-00">
+                  </label>
+                  <label>E-mail
+                    <input name="email" type="email" autocomplete="email" required placeholder="voce@email.com">
+                  </label>
+                </div>
+              </fieldset>
 
-        <div class="box prodcard">
-          <img id="coImg" src="913c66b8e7c1f30255dd0caae10a8191.jpg" alt="Caixa de Som JBL Xtreme 4" onerror="this.style.display='none'">
-          <div>
-            <strong>Caixa de Som JBL Xtreme 4</strong>
-            <div class="safe" style="margin:2px 0 0">Cor escolhida: <b id="colorSummary" style="color:var(--tx)">Preto</b></div>
-            <div style="color:var(--or);font-weight:900;font-size:1.2rem">R$ 60,90</div>
+              <fieldset class="fs">
+                <legend><i>2</i>Entrega</legend>
+                <div class="row">
+                  <label>CEP
+                    <input name="cep" inputmode="numeric" autocomplete="postal-code" required maxlength="9" minlength="9" pattern="\d{5}-\d{3}" title="CEP com 8 números" placeholder="00000-000">
+                  </label>
+                  <label>Estado (UF)
+                    <select name="state" autocomplete="address-level1" required></select>
+                  </label>
+                </div>
+                <label>Endereço e número
+                  <input name="address" autocomplete="street-address" required placeholder="Rua, número e complemento">
+                </label>
+                <label>Cidade
+                  <select name="city" autocomplete="address-level2" required disabled></select>
+                  <input name="cityOther" id="cityOther" placeholder="Digite o nome da sua cidade" style="display:none;margin-top:8px">
+                </label>
+                <label>Observação para entrega (opcional)
+                  <textarea name="notes" rows="2" placeholder="Complemento ou referência"></textarea>
+                </label>
+              </fieldset>
+
+              <div id="errorMsg" class="msg" role="alert"></div>
+              <button id="payButton" class="btn b1" type="submit">GERAR PAGAMENTO PIX</button>
+              <p class="safe" style="text-align:center">Confira os dados e o valor antes de pagar. O pedido só estará pago após confirmação da plataforma.</p>
+            </form>
+          </div>
+
+          <div id="pixPanel" class="box" style="display:none">
+            <button type="button" class="back" id="pixBack">← Editar dados</button>
+            <h2 style="margin-bottom:6px">Pague com Pix</h2>
+            <p id="pixStatus" class="safe">Aguardando os dados do pagamento…</p>
+            <div class="pixwait"><span class="dot"></span>Aguardando pagamento</div>
+            <div id="qrArea" class="qrbox"></div>
+            <div class="safe" style="margin:0 0 6px">Pix copia e cola</div>
+            <div class="copyrow">
+              <textarea id="pixCode" rows="1" readonly aria-label="Pix copia e cola"></textarea>
+              <button type="button" class="btn b1" onclick="copyPix()">COPIAR</button>
+            </div>
+            <ol class="how"><li>Abra o app do seu banco e escolha Pix.</li><li>Escaneie o QR Code ou cole o código copia e cola.</li><li>Confira o valor e confirme. A confirmação aparece aqui.</li></ol>
+          </div>
+
+          <div id="okPanel" class="box" style="display:none;text-align:center;padding:30px 20px">
+            <div class="okic">✔</div>
+            <h2 style="margin-bottom:6px">Pagamento confirmado!</h2>
+            <p class="safe">Seu pedido foi registrado. Prazo de entrega: 7 dias. Dúvidas serão respondidas pelo e-mail informado.</p>
+            <button type="button" class="btn b1" onclick="backStore()">VOLTAR À LOJA</button>
           </div>
         </div>
 
-        <form id="checkoutForm">
-          <fieldset class="fs">
-            <legend><i>1</i>Seus dados</legend>
-            <label>Nome completo
-              <input name="name" autocomplete="name" required placeholder="Seu nome">
-            </label>
-            <div class="row">
-              <label>CPF
-                <input name="cpf" inputmode="numeric" autocomplete="off" required
-                  maxlength="14" minlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
-                  title="CPF com 11 números" placeholder="000.000.000-00">
-              </label>
-              <label>Telefone
-                <input name="phone" type="tel" inputmode="numeric" autocomplete="tel" required
-                  maxlength="15" minlength="15" pattern="\(\d{2}\) \d{5}-\d{4}"
-                  title="Telefone com DDD e 9 dígitos" placeholder="(00) 00000-0000">
-              </label>
+        <aside class="coside box sumbox">
+          <h3 style="margin:0 0 12px">Resumo do pedido</h3>
+          <div class="prodcard">
+            <img id="coImg" src="913c66b8e7c1f30255dd0caae10a8191.jpg" alt="Caixa de Som JBL Xtreme 4" onerror="this.style.display='none'">
+            <div>
+              <strong>Caixa de Som JBL Xtreme 4</strong>
+              <div class="safe" style="margin:2px 0 0">Cor: <b id="colorSummary" style="color:var(--tx)">Preto</b></div>
             </div>
-          </fieldset>
-
-          <fieldset class="fs">
-            <legend><i>2</i>Entrega</legend>
-            <div class="row">
-              <label>CEP
-                <input name="cep" inputmode="numeric" autocomplete="postal-code" required
-                  maxlength="9" minlength="9" pattern="\d{5}-\d{3}"
-                  title="CEP com 8 números" placeholder="00000-000">
-              </label>
-              <label>Estado (UF)
-                <input name="state" autocomplete="address-level1" required
-                  maxlength="2" minlength="2" pattern="[A-Za-z]{2}" title="Sigla do estado com 2 letras" placeholder="PR">
-              </label>
-            </div>
-            <label>Endereço e número
-              <input name="address" autocomplete="street-address" required
-                placeholder="Rua, número e complemento">
-            </label>
-            <label>Cidade
-              <input name="city" autocomplete="address-level2" required>
-            </label>
-            <label>Observação para entrega (opcional)
-              <textarea name="notes" rows="2" placeholder="Complemento ou referência"></textarea>
-            </label>
-          </fieldset>
-
-          <div class="box sumbox">
-            <div class="ln"><span>Produto</span><b>R$ 60,90</b></div>
-            <div class="ln"><span>Frete</span><b id="freight">R$ 0,00</b></div>
-            <div class="ln" style="display:none"><span>Taxa de serviço</span><b id="serviceFee">R$ 0,00</b></div>
-            <div class="ln tot"><span>Total</span><strong id="total">R$ 60,90</strong></div>
           </div>
-
-          <div id="errorMsg" class="msg" role="alert"></div>
-
-          <button id="payButton" class="btn b1" type="submit">
-            GERAR PAGAMENTO PIX
-          </button>
-          <p class="safe" style="text-align:center">Confira os dados e o valor antes de pagar. O pedido só estará pago após confirmação da plataforma.</p>
-        </form>
-      </div>
-
-      <div id="pixPanel" class="box" style="display:none">
-        <button type="button" class="swb" id="pixBack" style="margin-bottom:14px">← Editar dados</button>
-        <h2 style="margin-bottom:6px">Pagamento Pix</h2>
-        <p id="pixStatus" class="safe">Aguardando os dados do pagamento…</p>
-        <div id="qrArea" style="text-align:center;margin:16px 0"></div>
-        <div class="safe" style="margin:0 0 6px">Pix copia e cola</div>
-        <div class="copyrow">
-          <textarea id="pixCode" rows="1" readonly aria-label="Pix copia e cola"></textarea>
-          <button type="button" class="btn b1" onclick="copyPix()">COPIAR</button>
-        </div>
+          <div class="ln"><span>Produto</span><b>R$ 69,90</b></div>
+          <div class="ln"><span>Frete</span><b id="freight">R$ 0,00</b></div>
+          <div class="ln" style="display:none"><span>Taxa de serviço</span><b id="serviceFee">R$ 0,00</b></div>
+          <div class="ln tot"><span>Total</span><strong id="total">R$ 69,90</strong></div>
+          <ul class="trust"><li>🔒 Pagamento em ambiente seguro</li><li>⚡ Pix com confirmação rápida</li><li>🚚 Entrega em até 7 dias</li><li>↩️ 7 dias para arrependimento</li></ul>
+        </aside>
       </div>
     </div>
   </section>
@@ -246,7 +282,7 @@ body.co-on #checkoutView{display:block}body.co-on #store{display:none}
 </footer>
 
 <script>
-const PRODUCT_PRICE = 60.90;
+const PRODUCT_PRICE = 69.90;
 const FREIGHT = 7.00;
 const SERVICE_RATE = 0;
 
@@ -433,10 +469,10 @@ document.getElementById("checkoutForm").addEventListener("submit", async functio
     const customer = {
       name: form.get("name"),
       cpf: form.get("cpf"),
-      phone: form.get("phone"),
+      email: form.get("email"),
       cep: form.get("cep"),
       address: form.get("address"),
-      city: form.get("city"),
+      city: form.get("city") === "__other" ? form.get("cityOther") : form.get("city"),
       state: form.get("state"),
       notes: form.get("notes")
     };
@@ -552,9 +588,22 @@ document.getElementById("checkoutForm").addEventListener("submit", async functio
  function cpfOk(c){c=c.replace(/\D/g,"");if(c.length!==11||/^(\d)\1+$/.test(c))return false;for(var t=9;t<11;t++){var s=0;for(var i=0;i<t;i++)s+=c[i]*(t+1-i);if((s*10%11)%10!=c[t])return false}return true}
  function mask(n,max,fn){var el=f.elements[n];el.addEventListener("input",function(){var d=el.value.replace(/\D/g,"").slice(0,max);el.value=fn(d);if(n==="cpf")el.setCustomValidity(d.length===11&&!cpfOk(d)?"CPF inválido":"")})}
  mask("cpf",11,function(d){return d.replace(/^(\d{3})(\d)/,"$1.$2").replace(/^(\d{3})\.(\d{3})(\d)/,"$1.$2.$3").replace(/\.(\d{3})(\d)/,".$1-$2")});
- mask("phone",11,function(d){if(d.length>7)return"("+d.slice(0,2)+") "+d.slice(2,7)+"-"+d.slice(7);if(d.length>2)return"("+d.slice(0,2)+") "+d.slice(2);return d.length?"("+d:""});
  mask("cep",8,function(d){return d.length>5?d.slice(0,5)+"-"+d.slice(5):d});
- var uf=f.elements.state;uf.addEventListener("input",function(){uf.value=uf.value.replace(/[^a-zA-Z]/g,"").toUpperCase().slice(0,2)});
+ var uf=f.elements.state,ct=f.elements.city,co=f.elements.cityOther;
+ var C={AC:["Rio Branco","Cruzeiro do Sul"],AL:["Maceió","Arapiraca","Rio Largo"],AP:["Macapá","Santana"],AM:["Manaus","Parintins","Itacoatiara"],BA:["Salvador","Feira de Santana","Vitória da Conquista","Camaçari","Lauro de Freitas","Ilhéus","Juazeiro"],CE:["Fortaleza","Caucaia","Juazeiro do Norte","Maracanaú","Sobral"],DF:["Brasília","Ceilândia","Taguatinga","Samambaia"],ES:["Vitória","Vila Velha","Serra","Cariacica","Linhares"],GO:["Goiânia","Aparecida de Goiânia","Anápolis","Rio Verde","Luziânia"],MA:["São Luís","Imperatriz","São José de Ribamar","Timon"],MT:["Cuiabá","Várzea Grande","Rondonópolis","Sinop"],MS:["Campo Grande","Dourados","Três Lagoas","Corumbá"],MG:["Belo Horizonte","Uberlândia","Contagem","Juiz de Fora","Betim","Montes Claros","Uberaba","Ipatinga"],PA:["Belém","Ananindeua","Santarém","Marabá","Castanhal"],PB:["João Pessoa","Campina Grande","Santa Rita","Patos"],PR:["Curitiba","Londrina","Maringá","Ponta Grossa","Cascavel","São José dos Pinhais","Foz do Iguaçu"],PE:["Recife","Jaboatão dos Guararapes","Olinda","Caruaru","Petrolina","Paulista"],PI:["Teresina","Parnaíba","Picos"],RJ:["Rio de Janeiro","São Gonçalo","Duque de Caxias","Nova Iguaçu","Niterói","Campos dos Goytacazes","Petrópolis"],RN:["Natal","Mossoró","Parnamirim","São Gonçalo do Amarante"],RS:["Porto Alegre","Caxias do Sul","Pelotas","Canoas","Santa Maria","Gravataí","Novo Hamburgo"],RO:["Porto Velho","Ji-Paraná","Ariquemes"],RR:["Boa Vista","Rorainópolis"],SC:["Florianópolis","Joinville","Blumenau","São José","Chapecó","Itajaí","Criciúma"],SP:["São Paulo","Guarulhos","Campinas","São Bernardo do Campo","Santo André","Osasco","Ribeirão Preto","Sorocaba","Santos","São José dos Campos","Jundiaí"],SE:["Aracaju","Nossa Senhora do Socorro","Lagarto"],TO:["Palmas","Araguaína","Gurupi"]};
+ function opt(v,t){var o=document.createElement("option");o.value=v;o.textContent=t;return o}
+ uf.appendChild(opt("","Selecione o estado"));
+ Object.keys(C).sort().forEach(function(k){uf.appendChild(opt(k,k))});
+ uf.addEventListener("change",function(){
+  ct.innerHTML="";co.style.display="none";co.required=false;co.value="";
+  if(!uf.value){ct.appendChild(opt("","Escolha o estado primeiro"));ct.disabled=true;return}
+  ct.appendChild(opt("","Selecione a cidade"));
+  C[uf.value].forEach(function(n){ct.appendChild(opt(n,n))});
+  ct.appendChild(opt("__other","Outra cidade…"));
+  ct.disabled=false;
+ });
+ ct.addEventListener("change",function(){var o=ct.value==="__other";co.style.display=o?"":"none";co.required=o;if(o)co.focus()});
+ ct.appendChild(opt("","Escolha o estado primeiro"));
  document.getElementById("pixBack").onclick=function(){document.getElementById("pixPanel").style.display="none"};
 })();
 </script>
@@ -582,6 +631,33 @@ t.className="show"+(ok?"":" er");t.querySelector(".ic").textContent=ok?"✔":"!"
   }else{st="idle";apply();btn.disabled=false}
  });
  apply();
+})();
+</script>
+<script>
+/* Confirmação só aparece quando o servidor informa pagamento aprovado. Consulta GET /api/status?id=... a cada 5 s. */
+(function(){
+ var PAID=["paid","approved","confirmed","completed","pago","aprovado","confirmado"];
+ var sp=window.showPix;
+ window.showPix=function(q,c){sp(q,c);stop();if(currentChargeId)pollTimer=setInterval(check,5000)};
+ function stop(){if(pollTimer){clearInterval(pollTimer);pollTimer=null}}
+ async function check(){
+  try{
+   var r=await fetch("/api/status?id="+encodeURIComponent(currentChargeId));
+   if(!r.ok)return;
+   var d=await r.json(),s=String(d.status||(d.data&&d.data.status)||"").toLowerCase();
+   if(d.paid===true||PAID.indexOf(s)>-1)done();
+  }catch(e){}
+ }
+ function done(){
+  stop();
+  var v=document.getElementById("checkoutView");v.classList.add("paid");
+  document.getElementById("pixPanel").style.display="none";
+  document.getElementById("okPanel").style.display="block";
+  setTimeout(function(){
+   document.getElementById("st1").className="st done";document.getElementById("st2").className="st done";document.getElementById("st3").className="st on";
+   window.scrollTo(0,0);
+  },0);
+ }
 })();
 </script>
 </body>
